@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Security and Data Analysis</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav-left">
+            <img src="assets/images/profile.jpg" alt="Chinedu Ukachukwu" class="nav-avatar" />
+        </div>
+        <h1>Chinedu Pius Ukachukwu</h1>
+        <nav>
+            <a href="/client/index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="project-detail">
+        <h1>🔐 Network Security & Data Analysis</h1>
+        <p class="project-summary">
+            A comprehensive cybersecurity project focused on network hardening, endpoint security, secure WLAN, firewall
+            configuration, VPN tunneling, and data analysis using Splunk. Conducted as part of the 22603VIC Certificate
+            IV in Cyber Security at TAFE.
+        </p>
+
+        <section>
+            <h2>📡 Router and WLAN Security Configuration</h2>
+            <ul>
+                <li>Configured R1 and R2 routers with secure console and VTY access</li>
+                <li>Enabled AAA authentication using RADIUS for HR_Manager and Finance_Manager</li>
+                <li>Configured WPA2 Enterprise WLAN and discovered SSID details with Wireshark</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>💾 Database Security: MySQL & MongoDB</h2>
+            <ul>
+                <li>Created structured database in MySQL with secure user access</li>
+                <li>Created NoSQL MongoDB collection and inserted security logs</li>
+                <li>Queried and retrieved entries to validate database integrity</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>🛡️ Firewall, IDS, Proxy & VPN</h2>
+            <ul>
+                <li>Configured firewall zones for internal/external protection and tested with ping</li>
+                <li>Installed Suricata and defined alerting rules for suspicious traffic</li>
+                <li>Installed Squid Proxy and blocked outbound access to restricted domains</li>
+                <li>Established both site-to-site and dial-up VPN tunnels</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>📊 Splunk Log Analysis (BOTSv1 Dataset)</h2>
+            <ul>
+                <li>Installed Splunk, imported BOTSv1 dataset</li>
+                <li>Performed event queries: source/destination IPs, top URIs, brute force attacks</li>
+                <li>Used regex to identify passwords and timeline analysis of attack behavior</li>
+                <li>Created a final report on findings, with improvement recommendations</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>🔥 Configuring Firewall Settings and Adding New Rules</h2>
+            <p>
+                This lab exercise focuses on configuring firewall rules to allow network troubleshooting by enabling ICMP (ping) requests. Rather than disabling the firewall entirely, which is considered a poor practice in production environments as it exposes the system to potential attacks, the recommended approach is to add a temporary firewall rule that permits ICMP traffic. This allows devices to be pinged for troubleshooting purposes while maintaining overall system protection.
+Once troubleshooting is complete, the temporary rule should be removed to restore the firewall to its original secure state. This method ensures both effective troubleshooting and continued protection of the system against unauthorized access.
+
+            </p>
+            <ul>
+                <li>Configured R1 and R2 routers with secure console and VTY access</li>
+                <li>Enabled AAA authentication using RADIUS for HR_Manager and Finance_Manager</li>
+                <li>Configured WPA2 Enterprise WLAN and discovered SSID details with Wireshark</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>📁 Download Evidence</h2>
+            <ul>
+                <li><a href="../assets/pdf/network-data-analysis-report.pdf" download>📄 Project Report (PDF)</a></li>
+                <li><a href="../server/evidence/splunk-password-bruteforce.pcap" download>📦 PCAP Brute Force
+                        Evidence</a></li>
+                <li><a href="../server/evidence/router-config.txt" download>📄 Router Configuration File</a></li>
+            </ul>
+        </section>
+
+        <p><a href="projects.html">← Back to Projects</a></p>
+    </main>
+</body>
+
+</html>

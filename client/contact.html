@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+  <header>
+    <div class="nav-left">
+      <img src="assets/images/profile.jpg" alt="Chinedu Ukachukwu" class="nav-avatar" />
+    </div>
+    <h1>Chinedu Pius Ukachukwu</h1>
+    <nav>
+      <a href="/client/index.html">Home</a>
+      <a href="/client/projects.html">Projects</a>
+      <a href="/client/about.html">About</a>
+      <a href="/client/contact.html">Contact</a>
+    </nav>
+  </header>
+
+
+  <main class="contact-section">
+    <h1>Contact Me</h1>
+    <p>If you'd like to collaborate, discuss a project, or just say hello — feel free to reach out!</p>
+
+    <form action="/contact" method="POST" class="contact-form">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Chinedu Ukachukwu</p>
+  </footer>
+</body>
+
+</html>

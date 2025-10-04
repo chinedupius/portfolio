@@ -1,0 +1,306 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+header, footer {
+  background-color: #004466;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
+nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+main {
+  padding: 20px;
+}
+
+
+.contact-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  color: #333;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #003b5c;
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label {
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.contact-form button {
+  background-color: #003b5c;
+  color: white;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #005c9e;
+}
+
+
+
+/* Profile image locked left */
+.nav-avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: fill;
+  border: 3px solid white;
+  margin-right: 20px;
+}
+
+.hero-section {
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 0 20px;
+  line-height: 1.6;
+  color: #222;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #003b5c;
+}
+
+.intro-line {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.bio-text {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.project-card {
+  background-color: #f5f7fa;
+  padding: 20px;
+  border-left: 4px solid #003b5c;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+}
+
+.project-card h2 {
+  margin-top: 0;
+  color: #003b5c;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 500;
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+.about-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  color: #333;
+  line-height: 1.7;
+}
+
+.about-section h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #003b5c;
+}
+
+.about-section h2 {
+  font-size: 1.4rem;
+  margin-top: 30px;
+  color: #003b5c;
+}
+
+.about-section p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.about-section ul {
+  padding-left: 20px;
+}
+
+.about-section li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.projects-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.projects-section h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #003b5c;
+  margin-bottom: 30px;
+}
+
+.project-card ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.project-card li {
+  margin-bottom: 8px;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-avatar {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 10px;
+  }
+}
+
+
+
+.project-detail {
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 0 20px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.project-detail h1 {
+  font-size: 2rem;
+  color: #003b5c;
+  margin-bottom: 15px;
+}
+
+.project-detail h2 {
+  margin-top: 30px;
+  color: #003b5c;
+  font-size: 1.3rem;
+}
+
+.project-detail ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.project-detail a {
+  color: #0066cc;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.project-detail a:hover {
+  text-decoration: underline;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 30px;
+  font-size: 0.9rem;
+}
+
+.firewall_img {
+  width: 100%;
+  max-width: 900px;      /* responsive but capped */
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  display: block;
+  margin: 8px auto 4px;  /* small gap below image */
+}
+
+figure {
+  margin: 20px 0 28px;   /* extra bottom space to separate figures */
+}
+
+figcaption {
+  font-style: italic;
+  text-align: right;     /* 🔹 right aligned as requested */
+  font-size: 0.9rem;
+  color: #7a7a7a;
+  margin-top: 4px;       /* sits close under the photo */
+  padding-right: 4px;
+  display: block;
+  border-top: 1px solid #eee; /* subtle separator under image */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
