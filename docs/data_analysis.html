@@ -515,63 +515,63 @@
             <li>
                 <b>Configuring VPN Properties:</b> I started by opening the VPN server properties in the Routing and Remote Access Manager. Here, I configured the authentication provider, accounting provider, and SSL certificate binding to ensure secure encrypted tunnels for remote access. This step ensures that only authenticated users can connect.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure a VPN Server/Configure and connect a site-to-site VPN tunnel1.png" alt="Configuring VPN Properties">
+                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure-VPN-Server/Configure and connect a site-to-site VPN tunnel1.png" alt="Configuring VPN Properties">
                     <figcaption>Configuring VPN Properties</figcaption>
                 </figure>
             </li>
             <li>
                 <b>Viewing Network Interfaces on VPN Server 1:</b> On VPN Server 1, I reviewed the available network interfaces. This view shows the physical and logical interfaces, confirming which ones are active, connected, and ready for VPN use. It ensures the network adapter is enabled and available for tunneling.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure a VPN Server/Configure and connect a site-to-site VPN tunnel2.png" alt="Configure and connect a site-to-site VPN tunnel2">
+                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure-VPN-Server/Configure and connect a site-to-site VPN tunnel2.png" alt="Configure and connect a site-to-site VPN tunnel2">
                     <figcaption>Viewing Network Interfaces on VPN Server 1</figcaption>
                 </figure>
             </li>
             <li>
                 <b>Viewing Network Interfaces on VPN Server 2:</b> On VPN Server 2, I repeated the same check. The “VPN to SITE-A” interface is listed but disconnected, showing that the tunnel has not yet been established. This step verified readiness on both ends before final tunnel configuration.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure a VPN Server/Configure and connect a site-to-site VPN tunnel3.png" alt="Configure and connect a site-to-site VPN tunnel3">
+                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure-VPN-Server/Configure and connect a site-to-site VPN tunnel3.png" alt="Configure and connect a site-to-site VPN tunnel3">
                     <figcaption>Viewing Network Interfaces on VPN Server 2</figcaption>
                 </figure>
             </li>
             <li>
                 <b>Testing Connectivity with Ping (Before VPN):</b> I attempted to ping the remote subnet 10.10.20.10 from the docs machine. The request timed out, confirming that connectivity was not yet possible without the VPN tunnel. This serves as a baseline test before enabling the VPN.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure a VPN Server/Configure and connect a site-to-site VPN tunnel4.png" alt="Configure and connect a site-to-site VPN tunnel3">
+                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure-VPN-Server/Configure and connect a site-to-site VPN tunnel4.png" alt="Configure and connect a site-to-site VPN tunnel3">
                     <figcaption>Testing Connectivity with Ping (Before VPN)</figcaption>
                 </figure>
             </li>
             <li>
                 <b>Testing Connectivity with Ping (After VPN):</b> After enabling the VPN tunnel, I re-tested connectivity. The ping to 10.10.1.1 succeeded with 0% packet loss. This verified that the VPN tunnel was now passing traffic securely between the two networks.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure a VPN Server/Configure VPN Server as a Dial VPN server and connect from a remote PC1.png" alt="Configure and connect a site-to-site VPN tunnel3">
+                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure-VPN-Server/Configure VPN Server as a Dial VPN server and connect from a remote PC1.png" alt="Configure and connect a site-to-site VPN tunnel3">
                     <figcaption>Testing Connectivity with Ping (After VPN)</figcaption>
                 </figure>
             </li>
             <li>
                 <b>Completing the VPN Setup Wizard:</b> I completed the Routing and Remote Access Server Setup Wizard, enabling VPN access. This finalizes the VPN configuration on the server side and applies the security policies required.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure a VPN Server/Configure VPN Server as a Dial VPN server and connect from a remote PC2.png" alt="Configure and connect a site-to-site VPN tunnel3">
+                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure-VPN-Server/Configure VPN Server as a Dial VPN server and connect from a remote PC2.png" alt="Configure and connect a site-to-site VPN tunnel3">
                     <figcaption>Completing the VPN Setup Wizard</figcaption>
                 </figure>
             </li>
             <li>
                 <b>Adding VPN Connection on docs PC:</b> On the docs system, I created a new VPN connection using Windows’ built-in VPN provider. I entered the VPN server’s IP (10.10.10.1) and configured it with a pre-shared key for L2TP/IPsec encryption.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure a VPN Server/Configure VPN Server as a Dial VPN server and connect from a remote PC3.png" alt="Configure and connect a site-to-site VPN tunnel3">
+                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure-VPN-Server/Configure VPN Server as a Dial VPN server and connect from a remote PC3.png" alt="Configure and connect a site-to-site VPN tunnel3">
                     <figcaption>Adding VPN Connection on docs PC</figcaption>
                 </figure>
             </li>
             <li>
                 <b>Testing Authentication:</b> I attempted to log in with VPN user credentials. The first attempt failed due to incorrect details, which highlights the importance of accurate username/password management for secure access.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure a VPN Server/Configure VPN Server as a Dial VPN server and connect from a remote PC4.png" alt="Configure and connect a site-to-site VPN tunnel3">
+                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure-VPN-Server/Configure VPN Server as a Dial VPN server and connect from a remote PC4.png" alt="Configure and connect a site-to-site VPN tunnel3">
                     <figcaption>Testing Authentication</figcaption>
                 </figure>
             </li>
             <li>
                 <b>Successful VPN Connection:</b> Finally, I successfully connected to the VPN. The status shows “Connected,” confirming that the encrypted tunnel is active and ready for secure communication between remote sites.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure a VPN Server/Configure VPN Server as a Dial VPN server and connect from a remote PC5.png" alt="Configure and connect a site-to-site VPN tunnel3">
+                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure-VPN-Server/Configure VPN Server as a Dial VPN server and connect from a remote PC5.png" alt="Configure and connect a site-to-site VPN tunnel3">
                     <figcaption>Successful VPN Connection</figcaption>
                 </figure>
             </li>
@@ -587,7 +587,7 @@
             <li>
                 <b>Configuring VPN Properties:</b> I started by opening the VPN server properties in the Routing and Remote Access Manager. Here, I configured the authentication provider, accounting provider, and SSL certificate binding to ensure secure encrypted tunnels for remote access. This step ensures that only authenticated users can connect.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure a VPN Server/Configure and connect a site-to-site VPN tunnel1.png" alt="Configuring VPN Properties">
+                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure-VPN-Server/Configure and connect a site-to-site VPN tunnel1.png" alt="Configuring VPN Properties">
                     <figcaption>Configuring VPN Properties</figcaption>
                 </figure>
             </li>
