@@ -13,7 +13,7 @@
         </div>
         <h1>Chinedu Pius Ukachukwu</h1>
         <nav>
-            <a href="/client/index.html">Home</a>
+            <a href="/docs/index.html">Home</a>
             <a href="projects.html">Projects</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
@@ -144,7 +144,7 @@
             <p>
                 I configured the Wireless LAN Controller (WLC), Access Point (AP), DHCP/DNS server, and end-user devices. The WLC was given a management IP so it could control APs, and I created two WLANs, a secure Staff SSID using WPA2-PSK and an open Guest SSID. The DHCP server was set to automatically assign addresses, default gateways, and DNS, while the AP registered with the WLC and started broadcasting both SSIDs. <br><br>
 
-                I tested the setup by connecting a laptop to the Staff network and verified traffic flows using Wireshark. The topology confirmed everything was working together, from routers and switches to wireless clients, simulating how a secure enterprise WLAN operates.
+                I tested the setup by connecting a laptop to the Staff network and verified traffic flows using Wireshark. The topology confirmed everything was working together, from routers and switches to wireless docss, simulating how a secure enterprise WLAN operates.
             </p>
 
             <li>
@@ -162,7 +162,7 @@
             </li>
 
             <li>
-                <b>Hand out client settings automatically:</b> Clients that join the WLAN get everything they need without manual config.
+                <b>Hand out docs settings automatically:</b> docss that join the WLAN get everything they need without manual config.
                 <figure>
                     <img class="firewall_img" src="assets/images/Data Analysis Images/Configure the WLAN/auth and asso sec protocols/DHCP and DNS Server Configuration.png" alt="DHCP and DNS Server Configuration"> <figcaption>DHCP pool issues IP, gateway, DNS and the WLC address for auto-discovery.</figcaption>
                 </figure>
@@ -177,7 +177,7 @@
             </li>
 
             <li>
-                <b>Join a client to the secure SSID: </b>This proves the SSID is live, security is enforced, and clients can authenticate.
+                <b>Join a docs to the secure SSID: </b>This proves the SSID is live, security is enforced, and docss can authenticate.
                 <figure>
                     <img class="firewall_img" src="assets/images/Data Analysis Images/Configure the WLAN/auth and asso sec protocols/Laptop Wireless Connection.png" alt="Laptop Wireless Connection">
                     <figcaption>Laptop detects the Staff SSID and connects using WPA2-PSK</figcaption>
@@ -185,7 +185,7 @@
             </li>
 
             <li>
-                <b>Validate real traffic: </b>I confirmed the client actually leases an IP, resolves names and syncs time, not just connected.
+                <b>Validate real traffic: </b>I confirmed the docs actually leases an IP, resolves names and syncs time, not just connected.
                 <figure>
                     <img class="firewall_img" src="assets/images/Data Analysis Images/Configure the WLAN/auth and asso sec protocols/Wireshark to discover.png" alt="Laptop Wireless Connection">
                     <figcaption>Wireshark capture showing DHCP, DNS, ARP and NTP after the wireless join.</figcaption>
@@ -196,7 +196,7 @@
                 <b>Show the full design in context: </b>This ties the build together and shows where each WLAN component sits in the network.
                 <figure>
                     <img class="firewall_img" src="assets/images/Data Analysis Images/Configure the WLAN/auth and asso sec protocols/Packet Tracer Final Skill Exam Topology.png" alt="Packet Tracer Final Topology">
-                    <figcaption>End-to-end topology — routers, switches, WLC, AP, DHCP/DNS and clients with addressing table.</figcaption>
+                    <figcaption>End-to-end topology — routers, switches, WLC, AP, DHCP/DNS and docss with addressing table.</figcaption>
                 </figure>
             </li>
         </ol>
@@ -306,7 +306,7 @@
                 </figure>
             </li>
             <li>
-                <b>Endpoint Firewall Enabled: </b>On the Windows client, I enabled Windows Defender Firewall with Advanced Security. This added another layer of control on the endpoint, protecting it from unauthorized inbound traffic.
+                <b>Endpoint Firewall Enabled: </b>On the Windows docs, I enabled Windows Defender Firewall with Advanced Security. This added another layer of control on the endpoint, protecting it from unauthorized inbound traffic.
                 <figure>
                     <img class="firewall_img" src="assets/images/Data Analysis Images/Secure network and endpoints/Configure the firewall zones/Firewall.png" alt="Created and Connected to Database">
                     <figcaption>Endpoint Firewall Enabled</figcaption>
@@ -392,7 +392,7 @@
                 </figure>
             </li>
             <li>
-                <b>Manual Proxy Configuration:</b> On the client system, I configured a manual proxy to forward all HTTP and HTTPS traffic through the Squid server at 192.168.0.100 on port 3128. This ensured all browsing requests passed through the proxy for filtering.
+                <b>Manual Proxy Configuration:</b> On the docs system, I configured a manual proxy to forward all HTTP and HTTPS traffic through the Squid server at 192.168.0.100 on port 3128. This ensured all browsing requests passed through the proxy for filtering.
                 <figure>
                     <img class="firewall_img" src="assets/images/Data Analysis Images/Secure network and endpoints/Install and configure a proxy server/Install and configure proxy server Squid2.png" alt="Created and Connected to Database">
                     <figcaption>Manual Proxy Configuration</figcaption>
@@ -478,14 +478,14 @@
                 </figure>
             </li>
             <li>
-                <b>Initial SSH Login Attempt:</b> Attempted an SSH login from a client machine to the server. The first attempt required accepting the server’s fingerprint for secure identification.
+                <b>Initial SSH Login Attempt:</b> Attempted an SSH login from a docs machine to the server. The first attempt required accepting the server’s fingerprint for secure identification.
                 <figure>
                     <img class="firewall_img" src="assets/images/Data Analysis Images/Secure network and endpoints/Verify firewall functionality/Connect to an SSH server using a public key1.png" alt="Created and Connected to Database">
                     <figcaption>Initial SSH Login Attempt</figcaption>
                 </figure>
             </li>
             <li>
-                <b>Copy Public Key to Server:</b> Using the ssh-copy-id command, I transferred the client’s public key to the server’s authorized_keys file, enabling passwordless authentication.
+                <b>Copy Public Key to Server:</b> Using the ssh-copy-id command, I transferred the docs’s public key to the server’s authorized_keys file, enabling passwordless authentication.
                 <figure>
                     <img class="firewall_img" src="assets/images/Data Analysis Images/Secure network and endpoints/Verify firewall functionality/Connect to an SSH server using a public key2.png" alt="Created and Connected to Database">
                     <figcaption>Copy Public Key to Server</figcaption>
@@ -534,7 +534,7 @@
                 </figure>
             </li>
             <li>
-                <b>Testing Connectivity with Ping (Before VPN):</b> I attempted to ping the remote subnet 10.10.20.10 from the client machine. The request timed out, confirming that connectivity was not yet possible without the VPN tunnel. This serves as a baseline test before enabling the VPN.
+                <b>Testing Connectivity with Ping (Before VPN):</b> I attempted to ping the remote subnet 10.10.20.10 from the docs machine. The request timed out, confirming that connectivity was not yet possible without the VPN tunnel. This serves as a baseline test before enabling the VPN.
                 <figure>
                     <img class="firewall_img" src="assets/images/Data Analysis Images/Configure a VPN Server/Configure and connect a site-to-site VPN tunnel4.png" alt="Configure and connect a site-to-site VPN tunnel3">
                     <figcaption>Testing Connectivity with Ping (Before VPN)</figcaption>
@@ -555,10 +555,10 @@
                 </figure>
             </li>
             <li>
-                <b>Adding VPN Connection on Client PC:</b> On the client system, I created a new VPN connection using Windows’ built-in VPN provider. I entered the VPN server’s IP (10.10.10.1) and configured it with a pre-shared key for L2TP/IPsec encryption.
+                <b>Adding VPN Connection on docs PC:</b> On the docs system, I created a new VPN connection using Windows’ built-in VPN provider. I entered the VPN server’s IP (10.10.10.1) and configured it with a pre-shared key for L2TP/IPsec encryption.
                 <figure>
                     <img class="firewall_img" src="assets/images/Data Analysis Images/Configure a VPN Server/Configure VPN Server as a Dial VPN server and connect from a remote PC3.png" alt="Configure and connect a site-to-site VPN tunnel3">
-                    <figcaption>Adding VPN Connection on Client PC</figcaption>
+                    <figcaption>Adding VPN Connection on docs PC</figcaption>
                 </figure>
             </li>
             <li>

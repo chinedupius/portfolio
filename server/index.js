@@ -5,7 +5,7 @@ const app = express();
 const PORT = 3000;
 
 app.use(cors());
-app.use(express.static(path.join(__dirname, '../client')));
+app.use(express.static(path.join(__dirname, '../docs')));
 
 app.post('/contact', express.urlencoded({ extended: true }), (req, res) => {
   console.log('Contact Form Submission:', req.body);
