@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <base href="/portfolio">
      <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -13,7 +14,7 @@
         </div>
         <h1>Chinedu Pius Ukachukwu</h1>
         <nav>
-            <a href="/docs/index.html">Home</a>
+            <a href="index.html">Home</a>
             <a href="projects.html">Projects</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
@@ -38,47 +39,47 @@
 
         <ol>
             <li> <b>Verify Ping Test Before Rule:</b> Ping requests failed due to blocked ICMP. 
-                <img class="firewall_img" src="../docs/assets/images/Firewall Configuration/ICMP Blocked Ping before troubleshooting.JPG" alt="Ping request failed due to blocked ICMP">
+                <img class="firewall_img" src="assets/images/Firewall Configuration/ICMP Blocked Ping before troubleshooting.JPG" alt="Ping request failed due to blocked ICMP">
             </li> <br>
             <li> <b>Access Firewall Settings:</b> Navigated to Windows Security → Firewall & network protection → Advanced settings. 
-                <img class="firewall_img" src="../docs/assets/images/Firewall Configuration/Windows Security.png" alt="Windows Security"> <br>
-                <img class="firewall_img" src="../docs/assets/images/Firewall Configuration/Go to advance settings.png" alt="Advanced Settings">
+                <img class="firewall_img" src="assets/images/Firewall Configuration/Windows Security.png" alt="Windows Security"> <br>
+                <img class="firewall_img" src="assets/images/Firewall Configuration/Go to advance settings.png" alt="Advanced Settings">
             </li> <br>
             <li>
                 <b>Open Inbound Rules:</b> Selected Inbound Rules from the left panel to manage incoming traffic and select New Rule on the right.
-                <img class="firewall_img" src="../docs/assets/images/Firewall Configuration/click inbound rules.png" alt="New Inbound Rule">
+                <img class="firewall_img" src="assets/images/Firewall Configuration/click inbound rules.png" alt="New Inbound Rule">
             </li> <br>
             <li>
                 <b>Create a New Rule:</b> Choose New Rule → Select Custom Rule → Next.
-                <img class="firewall_img" src="../docs/assets/images/Firewall Configuration/New Rule.png" alt="New Inbound Rule">
-                <img class="firewall_img" src="../docs/assets/images/Firewall Configuration/Custom and next.png" alt="Custom Rule">
+                <img class="firewall_img" src="assets/images/Firewall Configuration/New Rule.png" alt="New Inbound Rule">
+                <img class="firewall_img" src="assets/images/Firewall Configuration/Custom and next.png" alt="Custom Rule">
 
             </li> <br>
             <li>
                 <b>Define Protocol and Ports:</b> Chose Protocols and Ports → Protocol type: ICMPv4 as the protocol to allow ping requests → Next.
-                <img class="firewall_img" src="../docs/assets/images/Firewall Configuration/Protocol and ICMP.png" alt="Configured protocol and ICMP">
+                <img class="firewall_img" src="assets/images/Firewall Configuration/Protocol and ICMP.png" alt="Configured protocol and ICMP">
             </li> <br>
             <li>
                 <b>Named the Rule:</b> Name → Name: 'Allow ICMP Requests' for clarity.
-                <img class="firewall_img" src="../docs/assets/images/Firewall Configuration/ICMP Finished.png" alt="Allow ICMP">
+                <img class="firewall_img" src="assets/images/Firewall Configuration/ICMP Finished.png" alt="Allow ICMP">
             </li> <br>
             <li>
                 <b>Set Action and Profile:</b> Configured the rule to Allow the ICMP Request.
-                <img class="firewall_img" src="../docs/assets/images/Firewall Configuration/Allowed ICMP Request.png" alt="ICMP Configuration complete">
+                <img class="firewall_img" src="assets/images/Firewall Configuration/Allowed ICMP Request.png" alt="ICMP Configuration complete">
             </li> <br>
             <li>
                 <b>Verify with Ping Test:</b> After Rule: Ping succeeded with replies from the target device.
-                <img class="firewall_img" src="../docs/assets/images/Firewall Configuration/ICMP Allowed.JPG" alt="Allowed ICMP">
+                <img class="firewall_img" src="assets/images/Firewall Configuration/ICMP Allowed.JPG" alt="Allowed ICMP">
 
             </li> <br>
             <li>
                 <b>Remove Rule After Testing:</b> Once troubleshooting was complete, the rule was deleted to maintain security.
-                <img class="firewall_img" src="../docs/assets/images/Firewall Configuration/Delete Rule after troubleshooting.png" alt="Rule deleted">
-                <img class="firewall_img" src="../docs/assets/images/Firewall Configuration/Confirmed Deletion.png" alt="Delete Confirmed">
+                <img class="firewall_img" src="assets/images/Firewall Configuration/Delete Rule after troubleshooting.png" alt="Rule deleted">
+                <img class="firewall_img" src="assets/images/Firewall Configuration/Confirmed Deletion.png" alt="Delete Confirmed">
             </li> <br>
             <li>
                 <b>Verify Ping Test After Troubleshooting is complete:</b> Ping request was failed after deleting the rule and reverting the rules to its default state
-                <img src="../docs/assets/images/Firewall Configuration/ICMP Blocked after troubleshooting.JPG" alt="ICMP Blocked">
+                <img src="assets/images/Firewall Configuration/ICMP Blocked after troubleshooting.JPG" alt="ICMP Blocked">
             </li> <br>
         </ol>
 
