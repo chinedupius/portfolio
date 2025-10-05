@@ -3,9 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <title>Contact Me</title>
-  <!-- MUST end with a trailing slash so links resolve under /portfolio/ -->
+  <!-- Keep the trailing slash so all relative links live under /portfolio/ -->
   <base href="/portfolio/" />
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Minimal styles for buttons (safe even if your CSS already has them) -->
+  <style>
+    .contact-cta{margin:.75rem 0 1.25rem;display:flex;gap:.75rem;flex-wrap:wrap}
+    .btn{padding:.6rem 1rem;border-radius:.5rem;border:1px solid currentColor;
+         text-decoration:none;display:inline-block;font-weight:600}
+    .btn:hover{text-decoration:underline}
+    .btn.outline{background:transparent}
+    .contact-form{max-width:720px}
+    .contact-form label{display:block;margin:.75rem 0 .25rem}
+    .contact-form input,.contact-form textarea{
+      width:100%;padding:.6rem;border:1px solid #ccc;border-radius:.4rem
+    }
+    .contact-form button{margin-top:.75rem}
+    #formStatus{margin-top:.75rem}
+  </style>
 </head>
 
 <body>
@@ -26,23 +42,83 @@
     <h1>Contact Me</h1>
     <p>If you'd like to collaborate, discuss a project, or just say hello — feel free to reach out!</p>
 
-    <!-- Avoid 404 on submit: keep within /portfolio/ -->
-    <form action="contact.html" method="POST" class="contact-form">
-      <label for="name">Your Name:</label>
+    <!-- Quick contact buttons -->
+    <p class="contact-cta">
+      <a class="btn" id="emailBtn">Email me</a>
+      <a class="btn outline" id="linkedinBtn" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
+
+    <hr>
+
+    <!-- Works on static hosting: builds a mailto: from the form fields -->
+    <form id="contactForm" action="#" method="get" class="contact-form" novalidate>
+      <!-- Honeypot (spam trap) -->
+      <input type="text" name="company" autocomplete="off" tabindex="-1" style="display:none">
+
+      <label for="name">Your Name</label>
       <input type="text" id="name" name="name" required>
 
-      <label for="email">Email:</label>
+      <label for="email">Email</label>
       <input type="email" id="email" name="email" required>
 
-      <label for="message">Message:</label>
+      <label for="message">Message</label>
       <textarea id="message" name="message" rows="6" required></textarea>
 
-      <button type="submit">Send Message</button>
+      <button type="submit" class="btn">Send Message</button>
+      <p id="formStatus" role="status" aria-live="polite"></p>
     </form>
   </main>
 
   <footer>
     <p>&copy; 2025 Chinedu Ukachukwu</p>
   </footer>
+
+  <script>
+    // 🔧 Update these two values
+    const EMAIL = "your.email@example.com";
+    const LINKEDIN_URL = "https://www.linkedin.com/in/your-handle/";
+
+    // Build the email/LinkedIn buttons (keeps your address away from simple scrapers)
+    const emailBtn = document.getElementById("emailBtn");
+    const liBtn = document.getElementById("linkedinBtn");
+    emailBtn.href = `mailto:${EMAIL}?subject=${encodeURIComponent("Portfolio Inquiry")}&body=${encodeURIComponent("Hi Chinedu,\n\n")}`;
+    liBtn.href = LINKEDIN_URL;
+
+    // Turn form submit into a mailto: link (no backend; works on GitHub Pages)
+    const form = document.getElementById("contactForm");
+    const status = document.getElementById("formStatus");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      // Honeypot check
+      if (form.company && form.company.value) return;
+
+      const name = (document.getElementById("name").value || "").trim();
+      const fromEmail = (document.getElementById("email").value || "").trim();
+      const msg = (document.getElementById("message").value || "").trim();
+
+      if (!name || !fromEmail || !msg) {
+        status.textContent = "Please fill out all fields.";
+        return;
+      }
+
+      const subject = `Portfolio Inquiry from ${name}`;
+      const bodyLines = [
+        msg,
+        "",
+        "—",
+        `Name: ${name}`,
+        `Email: ${fromEmail}`
+      ];
+      const mailto = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join("\n"))}`;
+
+      // Open default mail client with the draft
+      window.location.href = mailto;
+
+      status.textContent = "Your email client should open with a pre-filled message. If not, click the 'Email me' button above.";
+      form.reset();
+    });
+  </script>
 </body>
 </html>
