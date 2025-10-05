@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Contact Me</title>
-  <base href="/portfolio">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- MUST end with a trailing slash so links resolve under /portfolio/ -->
+  <base href="/portfolio/" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
@@ -22,12 +22,12 @@
     </nav>
   </header>
 
-
   <main class="contact-section">
     <h1>Contact Me</h1>
     <p>If you'd like to collaborate, discuss a project, or just say hello — feel free to reach out!</p>
 
-    <form action="/contact" method="POST" class="contact-form">
+    <!-- Avoid 404 on submit: keep within /portfolio/ -->
+    <form action="contact.html" method="POST" class="contact-form">
       <label for="name">Your Name:</label>
       <input type="text" id="name" name="name" required>
 
@@ -45,5 +45,4 @@
     <p>&copy; 2025 Chinedu Ukachukwu</p>
   </footer>
 </body>
-
 </html>
