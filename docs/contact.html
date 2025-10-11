@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Contact Me</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Chinedu Ukachukwu</title>
+
   <base href="/portfolio/" />
   <link rel="stylesheet" href="assets/css/style.css" />
 
-  <!-- Minimal styles for buttons (safe even if your CSS already has them) -->
+  <!-- Minimal button styles (safe to keep) -->
   <style>
     .contact-cta{margin:.75rem 0 1.25rem;display:flex;gap:.75rem;flex-wrap:wrap}
     .btn{padding:.6rem 1rem;border-radius:.5rem;border:1px solid currentColor;
@@ -24,46 +26,48 @@
 </head>
 
 <body>
+  <!-- Header (matches .header-inner grid in CSS) -->
   <header>
-        <div class="header-inner">
-            <div class="nav-left">
-                <img src="assets/images/profile.jpg" alt="Chinedu Ukachukwu" class="nav-avatar" />
-            </div>
-    
-            <h2 class="site-title">Chinedu Pius Ukachukwu</h2>
-            <p class="subtitle">Aspiring Cybersecurity Professional</p>
-    
-            <nav class="site-nav">
-                <a href="index.html">Home</a>
-                <a href="projects.html">Projects</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </div>
-    </header>
+    <div class="header-inner">
+      <div class="nav-left">
+        <img src="assets/images/profile.jpg" alt="Chinedu Ukachukwu" class="nav-avatar" />
+      </div>
 
-  <main class="contact-section">
+      <h2 class="site-title">Chinedu Pius Ukachukwu</h2>
+      <p class="subtitle">Aspiring Cybersecurity Professional</p>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main content (clamped to --maxw via .section) -->
+  <main class="contact-section section">
     <h1>Contact Me</h1>
     <p>If you'd like to collaborate, discuss a project, or just say hello — feel free to reach out!</p>
 
     <!-- Quick contact buttons -->
-    <p class="contact-cta">
+    <p class="contact-cta" role="group" aria-label="Quick contact actions">
       <a class="btn" id="emailBtn">Email me</a>
       <a class="btn outline" id="linkedinBtn" target="_blank" rel="noopener">LinkedIn</a>
     </p>
 
     <hr>
 
-    <!-- Works on static hosting: builds a mailto: from the form fields -->
+    <!-- Static hosting friendly: builds a mailto: draft from the form -->
     <form id="contactForm" action="#" method="get" class="contact-form" novalidate>
       <!-- Honeypot (spam trap) -->
-      <input type="text" name="company" autocomplete="off" tabindex="-1" style="display:none">
+      <input type="text" name="company" autocomplete="off" tabindex="-1" style="display:none" aria-hidden="true">
 
       <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" required>
+      <input type="text" id="name" name="name" required inputmode="text" autocomplete="name" />
 
       <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="email" name="email" required inputmode="email" autocomplete="email" />
 
       <label for="message">Message</label>
       <textarea id="message" name="message" rows="6" required></textarea>
@@ -82,13 +86,13 @@
     const EMAIL = "ukachukwuchinedupius@yahoo.com";
     const LINKEDIN_URL = "https://www.linkedin.com/in/chinedu-ukachukwu-99441a49";
 
-    // Build the email/LinkedIn buttons (keeps your address away from simple scrapers)
+    // Build quick action buttons
     const emailBtn = document.getElementById("emailBtn");
     const liBtn = document.getElementById("linkedinBtn");
     emailBtn.href = `mailto:${EMAIL}?subject=${encodeURIComponent("Portfolio Inquiry")}&body=${encodeURIComponent("Hi Chinedu,\n\n")}`;
     liBtn.href = LINKEDIN_URL;
 
-    // Turn form submit into a mailto: link (no backend; works on GitHub Pages)
+    // Convert form submit to a mailto: draft (works on static hosting)
     const form = document.getElementById("contactForm");
     const status = document.getElementById("formStatus");
 

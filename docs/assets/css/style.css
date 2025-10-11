@@ -96,13 +96,11 @@ main {
   --maxw:1100px; /* content width for header + pages */
 }
 
-*{box-sizing:border-box}
-body{
-  font-family: Arial, sans-serif;
-  margin:0; padding:0;
-  background:#f9f9f9; color:var(--text);
-  line-height:1.6;
-}
+*{ box-sizing:border-box; }
+html, body { margin:0; padding:0; background:#f9f9f9; color:var(--text); line-height:1.6; }
+/* Never let page scroll sideways because of wide media */
+html, body { overflow-x: hidden; }
+
 main{ padding:24px 16px; }
 
 /* ==============================================
@@ -196,11 +194,16 @@ footer{
 }
 
 /* ==============================================
-   SECTIONS / CARDS
+   SECTIONS / CARDS / CONTAINER CLAMP
    ============================================== */
 .section, .hero-section, .about-section, .projects-section,
-.project-detail, .contact-section{
+.project-detail, .contact-section, main{
+  width:100%;
   max-width:var(--maxw);
+  margin-left:auto; margin-right:auto;
+}
+.section, .hero-section, .about-section, .projects-section,
+.project-detail, .contact-section{
   margin:40px auto; padding:0 20px;
   background:var(--card);
   border-radius:var(--radius);
@@ -237,17 +240,31 @@ footer{
 .contact-form button:hover{ background:#005c9e; }
 
 /* ==============================================
-   IMAGES / SCREENSHOTS (crisp + uniform)
+   IMAGES / SCREENSHOTS (crisp + uniform + no overflow)
    ============================================== */
 figure{ margin:28px auto; max-width:900px; }
-figure img{
-  width:100%; max-width:900px; height:auto; display:block;
-  border-radius:8px; box-shadow:0 3px 10px rgba(0,0,0,.12);
+figure img,
+main img:not(.nav-avatar),
+.section img:not(.nav-avatar),
+.about-section img:not(.nav-avatar),
+.projects-section img:not(.nav-avatar),
+.project-detail img:not(.nav-avatar),
+.contact-section img:not(.nav-avatar){
+  display:block;
+  width:100%;          /* prevent overflow */
+  max-width:900px;     /* consistent visual cap */
+  height:auto;         /* keep aspect ratio */
+  margin:0 auto;       /* center in container */
+  border-radius:8px;
+  box-shadow:0 3px 10px rgba(0,0,0,.12);
+
+  /* keep text in screenshots crisp */
   image-rendering:-webkit-optimize-contrast;
   image-rendering:crisp-edges;
   image-rendering:pixelated;
 }
-/* For consistent footprint when source sizes vary */
+
+/* Consistent footprint when sources vary (optional) */
 .screenshot{ aspect-ratio:16/9; object-fit:contain; }
 
 figcaption{
@@ -255,12 +272,20 @@ figcaption{
   font-size:.92rem; margin-top:6px; border-top:1px solid #eee; padding-top:4px;
 }
 
-/* Prevent any accidental blur */
+/* Prevent accidental blur */
 img{ filter:none !important; opacity:1 !important; }
 
-/* HiDPI tweak */
+/* HiDPI tweak (avoid over-sharpening on retina) */
 @media (-webkit-min-device-pixel-ratio:2), (min-resolution:192dpi){
-  figure img{ image-rendering:auto; }
+  figure img,
+  main img:not(.nav-avatar),
+  .section img:not(.nav-avatar),
+  .about-section img:not(.nav-avatar),
+  .projects-section img:not(.nav-avatar),
+  .project-detail img:not(.nav-avatar),
+  .contact-section img:not(.nav-avatar){
+    image-rendering:auto;
+  }
 }
 
 /* ==============================================
@@ -269,79 +294,4 @@ img{ filter:none !important; opacity:1 !important; }
 @media (max-width:560px){
   body{ font-size:.95rem; }
   .site-nav a{ font-size:.95rem; }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =============== IMAGE CONTAINMENT + CONSISTENCY FIX =============== */
-
-/* Never let page scroll sideways because of wide media */
-html, body { overflow-x: hidden; }
-
-/* A safe container width for all content sections */
-.section, .hero-section, .about-section, .projects-section,
-.project-detail, .contact-section, main {
-  width: 100%;
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Universal guard: all content images/videos shrink to fit.
-   (Exclude the avatar so header stays correct.) */
-main img:not(.nav-avatar),
-.section img:not(.nav-avatar),
-.about-section img:not(.nav-avatar),
-.projects-section img:not(.nav-avatar),
-.project-detail img:not(.nav-avatar),
-.contact-section img:not(.nav-avatar),
-figure img {
-  display: block;
-  width: 100%;          /* <- prevents overflow */
-  max-width: 900px;     /* <- consistent visual cap */
-  height: auto;         /* keep aspect ratio */
-  margin: 0 auto;       /* center in container */
-  border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(0,0,0,.12);
-
-  /* keep text in screenshots crisp */
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-  image-rendering: pixelated;
-}
-
-/* Optional: enforce a consistent footprint when sources vary */
-.screenshot { aspect-ratio: 16/9; object-fit: contain; }
-
-/* Figures themselves never exceed page width */
-figure { margin: 28px auto; max-width: 900px; }
-
-/* Captions stay inside width */
-figcaption {
-  font-style: italic; text-align: right; font-size: .92rem;
-  color: #6f6f6f; margin-top: 6px; border-top: 1px solid #eee; padding-top: 4px;
-}
-
-/* Kill any accidental inline widths in HTML that force overflow */
-img[width], img[height] { width: auto; height: auto; }
-
-/* HiDPI tweak */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  main img:not(.nav-avatar), figure img { image-rendering: auto; }
 }
