@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,17 @@
     <base href="/portfolio/" />
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-     <header>
+    <header>
         <div class="header-inner">
             <div class="nav-left">
                 <img src="assets/images/profile.jpg" alt="Chinedu Ukachukwu" class="nav-avatar" />
             </div>
-    
+
             <h2 class="site-title">Chinedu Pius Ukachukwu</h2>
             <p class="subtitle">Aspiring Cybersecurity Professional</p>
-    
+
             <nav class="site-nav">
                 <a href="index.html">Home</a>
                 <a href="projects.html">Projects</a>
@@ -25,7 +27,7 @@
             </nav>
         </div>
     </header>
-    
+
     <main class="project-detail">
         <h1>🔐 Network Security & Data Analysis</h1>
         <p>
@@ -33,44 +35,45 @@
             configuration, VPN tunneling, and data analysis using Splunk. Conducted as part of the 22603VIC Certificate
             IV in Cyber Security at TAFE.
         </p>
-            <ul>
-                <li>
-                    <h2>📡 Router and WLAN Security Configuration</h2>
-                    <ul>
-                        <li>Configured R1 and R2 routers with secure console and VTY access</li>
-                        <li>Enabled AAA authentication using RADIUS for HR_Manager and Finance_Manager</li>
-                        <li>Configured WPA2 Enterprise WLAN and discovered SSID details with Wireshark</li>
-                    </ul>
-                </li>
-                <li>
-                    <h2>💾 Database Security: MySQL & MongoDB</h2>
-                    <ul>
-                        <li>Created structured database in MySQL with secure user access</li>
-                        <li>Created NoSQL MongoDB collection and inserted security logs</li>
-                        <li>Queried and retrieved entries to validate database integrity</li>
-                    </ul>
-                </li>
-                <li>
-                    <h2>🛡️ Firewall, IDS, Proxy & VPN</h2>
-                    <ul>
-                        <li>Configured firewall zones for internal/external protection and tested with ping</li>
-                        <li>Installed Suricata and defined alerting rules for suspicious traffic</li>
-                        <li>Installed Squid Proxy and blocked outbound access to restricted domains</li>
-                        <li>Established both site-to-site and dial-up VPN tunnels</li>
-                    </ul>
-                </li>
-                <li>
-                    <h2>📊 Splunk Log Analysis (BOTSv1 Dataset)</h2>
-                    <ul>
-                        <li>Installed Splunk, imported BOTSv1 dataset</li>
-                        <li>Performed event queries: source/destination IPs, top URIs, brute force attacks</li>
-                        <li>Used regex to identify passwords and timeline analysis of attack behavior</li>
-                        <li>Created a final report on findings, with improvement recommendations</li>
-                    </ul>
-                </li>
-            </ul>
+        <ul>
+            <li>
+                <h2>📡 Router and WLAN Security Configuration</h2>
+                <ul>
+                    <li>Configured R1 and R2 routers with secure console and VTY access</li>
+                    <li>Enabled AAA authentication using RADIUS for HR_Manager and Finance_Manager</li>
+                    <li>Configured WPA2 Enterprise WLAN and discovered SSID details with Wireshark</li>
+                </ul>
+            </li>
+            <li>
+                <h2>💾 Database Security: MySQL & MongoDB</h2>
+                <ul>
+                    <li>Created structured database in MySQL with secure user access</li>
+                    <li>Created NoSQL MongoDB collection and inserted security logs</li>
+                    <li>Queried and retrieved entries to validate database integrity</li>
+                </ul>
+            </li>
+            <li>
+                <h2>🛡️ Firewall, IDS, Proxy & VPN</h2>
+                <ul>
+                    <li>Configured firewall zones for internal/external protection and tested with ping</li>
+                    <li>Installed Suricata and defined alerting rules for suspicious traffic</li>
+                    <li>Installed Squid Proxy and blocked outbound access to restricted domains</li>
+                    <li>Established both site-to-site and dial-up VPN tunnels</li>
+                </ul>
+            </li>
+            <li>
+                <h2>📊 Splunk Log Analysis (BOTSv1 Dataset)</h2>
+                <ul>
+                    <li>Installed Splunk, imported BOTSv1 dataset</li>
+                    <li>Performed event queries: source/destination IPs, top URIs, brute force attacks</li>
+                    <li>Used regex to identify passwords and timeline analysis of attack behavior</li>
+                    <li>Created a final report on findings, with improvement recommendations</li>
+                </ul>
+            </li>
+        </ul>
         <p>
-            This project gave me hands-on experience in identifying threats, implementing layered defenses, and analyzing security data to support incident response and decision-making.
+            This project gave me hands-on experience in identifying threats, implementing layered defenses, and
+            analyzing security data to support incident response and decision-making.
         </p>
 
         <h2>🔧 Tools & Environment</h2>
@@ -80,37 +83,63 @@
             <li><b>Secure Access:</b> SSH (RSA), Site-to-Site & Dial-up VPN</li>
             <li><b>Data:</b> MySQL & MongoDB (CRUD, simple vuln repo)</li>
             <li><b>SIEM:</b> Splunk + Universal Forwarder, SPL queries</li>
-            
+
         </ul>
 
         <h3>Configure and secure network devices</h3>
 
         <h4>Configure the routers</h4>
         <ol>
-            <li> <b>🏷️Name Routers:</b> Gave each router a clear hostname (R1 and R2), but in a real world environment, I’d use a proper naming convention like location and role (e.g., SYD-HQ-B1-R1 for Sydney HQ, Building 1, Router 1, or SYD-PLM-HR-R2 for Sydney Plumpton, HR, Router 2). Clear names make monitoring, audits, and on-call fixes much faster.
+            <li> <b>🏷️Name Routers:</b> Gave each router a clear hostname (R1 and R2), but in a real world environment,
+                I’d use a proper naming convention like location and role (e.g., SYD-HQ-B1-R1 for Sydney HQ, Building 1,
+                Router 1, or SYD-PLM-HR-R2 for Sydney Plumpton, HR, Router 2). Clear names make monitoring, audits, and
+                on-call fixes much faster.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure the routers/Name Router/Router1.png" alt="Name router 1 and router 2"> <figcaption>Hostname set to R1.</figcaption>
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Configure the routers/Name Router/Router1.png"
+                        alt="Name router 1 and router 2">
+                    <figcaption>Hostname set to R1.</figcaption>
                 </figure>
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure the routers/Name Router/Router2.png" alt="Name router 1 and router 2"> <figcaption>Hostname set to R2</figcaption>
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Configure the routers/Name Router/Router2.png"
+                        alt="Name router 1 and router 2">
+                    <figcaption>Hostname set to R2</figcaption>
                 </figure>
             </li>
-            <li> <b>🔐Securing device access (console, VTY, AUX):</b> To protect the router’s management paths, I configured authentication on the console, VTY (remote), and AUX lines. Each line was given its own password, and I enforced SSH-only for remote sessions. I also set an encrypted enable secret for privileged mode. This will prevent unauthorized access.
+            <li> <b>🔐Securing device access (console, VTY, AUX):</b> To protect the router’s management paths, I
+                configured authentication on the console, VTY (remote), and AUX lines. Each line was given its own
+                password, and I enforced SSH-only for remote sessions. I also set an encrypted enable secret for
+                privileged mode. This will prevent unauthorized access.
 
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure the routers/config console,vty and aux/con,vty,aux.png" alt="Line Security Applied"> <figcaption>Console, VTY, and AUX lines now require login. VTY access is restricted to SSH only</figcaption>
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Configure the routers/config console,vty and aux/con,vty,aux.png"
+                        alt="Line Security Applied">
+                    <figcaption>Console, VTY, and AUX lines now require login. VTY access is restricted to SSH only
+                    </figcaption>
                 </figure>
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure the routers/config console,vty and aux/encrypt password.png" alt="Enable Secret Configured"> <figcaption>Privileged EXEC mode is protected with an encrypted secret password.</figcaption>
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Configure the routers/config console,vty and aux/encrypt password.png"
+                        alt="Enable Secret Configured">
+                    <figcaption>Privileged EXEC mode is protected with an encrypted secret password.</figcaption>
                 </figure>
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure the routers/config console,vty and aux/confirmed password is encrypted.png" alt="Verification Test"> <figcaption>Login prompts appear on access, proof that authentication is enforced before entry.</figcaption>
-                </figure>                
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Configure the routers/config console,vty and aux/confirmed password is encrypted.png"
+                        alt="Verification Test">
+                    <figcaption>Login prompts appear on access, proof that authentication is enforced before entry.
+                    </figcaption>
+                </figure>
             </li>
 
             <li>
-                <b>👥 Role-Based Access Control with AAA & RADIUS:</b> I implemented AAA (Authentication, Authorization, and Accounting) to secure router access and integrated it with a RADIUS server for centralized user authentication. Instead of relying only on local accounts, I enforced login policies that check users against the RADIUS database. <br><br>
-                
+                <b>👥 Role-Based Access Control with AAA & RADIUS:</b> I implemented AAA (Authentication, Authorization,
+                and Accounting) to secure router access and integrated it with a RADIUS server for centralized user
+                authentication. Instead of relying only on local accounts, I enforced login policies that check users
+                against the RADIUS database. <br><br>
+
                 I created dedicated accounts for:
                 <ul>
                     <li>
@@ -121,48 +150,92 @@
                     </li>
                 </ul>
 
-                Each user’s role determines the level of access they receive. I also configured a local fallback account for emergency access if the RADIUS server is unavailable.
+                Each user’s role determines the level of access they receive. I also configured a local fallback account
+                for emergency access if the RADIUS server is unavailable.
 
                 <p>
-                    This setup ensures least privilege access and centralized identity management. When someone changes roles or leaves the organization, disabling them on the RADIUS server instantly cuts their access to all network devices — no need to touch every router manually.
+                    This setup ensures least privilege access and centralized identity management. When someone changes
+                    roles or leaves the organization, disabling them on the RADIUS server instantly cuts their access to
+                    all network devices — no need to touch every router manually.
                 </p>
 
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure the routers/Emp network access/created router1 user and pass.png" alt="AAA local authentication setup"> <figcaption>Router R1 configured with a local username and AAA new-model enabled.</figcaption>
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Configure the routers/Emp network access/created router1 user and pass.png"
+                        alt="AAA local authentication setup">
+                    <figcaption>Router R1 configured with a local username and AAA new-model enabled.</figcaption>
                 </figure>
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure the routers/Emp network access/login to the new user on router.png" alt="Local user login test"> <figcaption>Successful login to R1 (R1User). Confirms that AAA local authentication is active.</figcaption>
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Configure the routers/Emp network access/login to the new user on router.png"
+                        alt="Local user login test">
+                    <figcaption>Successful login to R1 (R1User). Confirms that AAA local authentication is active.
+                    </figcaption>
                 </figure>
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure the routers/Emp network access/configure aaa auth radius server.png" alt="R2 AAA + RADIUS configuration"> <figcaption>Router R2 configured with AAA, pointing to the RADIUS server at 192.168.2.253.</figcaption>
-                </figure>  
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Configure the routers/Emp network access/configure aaa auth radius server.png"
+                        alt="R2 AAA + RADIUS configuration">
+                    <figcaption>Router R2 configured with AAA, pointing to the RADIUS server at 192.168.2.253.
+                    </figcaption>
+                </figure>
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure the routers/Emp network access/users created.png" alt="RADIUS server setup"> <figcaption>RADIUS server setup user accounts for Luke (Finance) and Matthew (HR).</figcaption>
-                </figure> 
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Configure the routers/Emp network access/users created.png"
+                        alt="RADIUS server setup">
+                    <figcaption>RADIUS server setup user accounts for Luke (Finance) and Matthew (HR).</figcaption>
+                </figure>
 
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure the routers/Emp network access/verify user login auth.jpg" alt="Authentication test – Matthew (HR)"> <figcaption>Login attempt with Matthew’s HR account denied (incorrect password).</figcaption>
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Configure the routers/Emp network access/verify user login auth.jpg"
+                        alt="Authentication test – Matthew (HR)">
+                    <figcaption>Login attempt with Matthew’s HR account denied (incorrect password).</figcaption>
                 </figure>
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure the routers/Emp network access/auth with luke.jpg" alt="Authentication test – Luke (Finance)"> <figcaption>Successful login with Luke’s Finance account via RADIUS. User is authenticated and granted access to R2.</figcaption>
-                </figure>  
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Configure the routers/Emp network access/auth with luke.jpg"
+                        alt="Authentication test – Luke (Finance)">
+                    <figcaption>Successful login with Luke’s Finance account via RADIUS. User is authenticated and
+                        granted access to R2.</figcaption>
+                </figure>
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure the routers/Emp network access/login with telnet.jpg" alt="Telnet session – password prompt"> <figcaption>Verification that router prompts for authentication. Confirms RADIUS + AAA integration.</figcaption>
-                </figure> 
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Configure the routers/Emp network access/login with telnet.jpg"
+                        alt="Telnet session – password prompt">
+                    <figcaption>Verification that router prompts for authentication. Confirms RADIUS + AAA integration.
+                    </figcaption>
+                </figure>
 
                 <p>
-                    <h3>🖧 Router Configuration – Overall Achievement</h3>
-                    In this stage of the project, I was able to fully configure and secure both routers (R1 and R2) to reflect real-world enterprise practices. I started by giving each router a clear hostname, which makes device management and troubleshooting easier. From there, I enforced strong security on all access methods, including the console, VTY, and AUX ports, ensuring that every management entry point required authentication. <br> <br>
+                <h3>🖧 Router Configuration – Overall Achievement</h3>
+                In this stage of the project, I was able to fully configure and secure both routers (R1 and R2) to
+                reflect real-world enterprise practices. I started by giving each router a clear hostname, which makes
+                device management and troubleshooting easier. From there, I enforced strong security on all access
+                methods, including the console, VTY, and AUX ports, ensuring that every management entry point required
+                authentication. <br> <br>
 
-                    On R1, I went a step further by enabling SSH with RSA key generation and AAA authentication, replacing insecure Telnet sessions with encrypted remote access. This setup guaranteed that only authorized users could log in, and that all remote management traffic was protected. On R2, I configured AAA local authentication, allowing role-based access for different users while still keeping the device secure. <br> <br>
+                On R1, I went a step further by enabling SSH with RSA key generation and AAA authentication, replacing
+                insecure Telnet sessions with encrypted remote access. This setup guaranteed that only authorized users
+                could log in, and that all remote management traffic was protected. On R2, I configured AAA local
+                authentication, allowing role-based access for different users while still keeping the device secure.
+                <br> <br>
 
-                    The end result is that both routers are not only configured for functionality but also hardened against unauthorized access. This demonstrates my ability to apply security best practices in router management, combining local user authentication with centralized AAA and secure remote login through SSH.
+                The end result is that both routers are not only configured for functionality but also hardened against
+                unauthorized access. This demonstrates my ability to apply security best practices in router management,
+                combining local user authentication with centralized AAA and secure remote login through SSH.
                 </p>
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure the routers/Emp network access/Logged into router1 and setup SSH.png" alt="Telnet session – password prompt"> <figcaption>Secure SSH Configuration on Router R1</figcaption>
-                </figure> 
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Configure the routers/Emp network access/Logged into router1 and setup SSH.png"
+                        alt="Telnet session – password prompt">
+                    <figcaption>Secure SSH Configuration on Router R1</figcaption>
+                </figure>
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure the routers/Emp network access/created router2 user and pass.png" alt="Telnet session – password prompt"> <figcaption>Secure SSH Configuration on Router R2</figcaption>
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Configure the routers/Emp network access/created router2 user and pass.png"
+                        alt="Telnet session – password prompt">
+                    <figcaption>Secure SSH Configuration on Router R2</figcaption>
                 </figure>
 
             </li> <br>
@@ -172,61 +245,95 @@
         <ol>
             <h3>🌐 WLAN Configuration</h3>
             <p>
-                I configured the Wireless LAN Controller (WLC), Access Point (AP), DHCP/DNS server, and end-user devices. The WLC was given a management IP so it could control APs, and I created two WLANs, a secure Staff SSID using WPA2-PSK and an open Guest SSID. The DHCP server was set to automatically assign addresses, default gateways, and DNS, while the AP registered with the WLC and started broadcasting both SSIDs. <br><br>
+                I configured the Wireless LAN Controller (WLC), Access Point (AP), DHCP/DNS server, and end-user
+                devices. The WLC was given a management IP so it could control APs, and I created two WLANs, a secure
+                Staff SSID using WPA2-PSK and an open Guest SSID. The DHCP server was set to automatically assign
+                addresses, default gateways, and DNS, while the AP registered with the WLC and started broadcasting both
+                SSIDs. <br><br>
 
-                I tested the setup by connecting a laptop to the Staff network and verified traffic flows using Wireshark. The topology confirmed everything was working together, from routers and switches to wireless docss, simulating how a secure enterprise WLAN operates.
+                I tested the setup by connecting a laptop to the Staff network and verified traffic flows using
+                Wireshark. The topology confirmed everything was working together, from routers and switches to wireless
+                docss, simulating how a secure enterprise WLAN operates.
             </p>
 
             <li>
-                <b>Give the controller a reachable address:</b> This makes the controller reachable on the LAN so it can manage APs and serve the WLANs.
+                <b>Give the controller a reachable address:</b> This makes the controller reachable on the LAN so it can
+                manage APs and serve the WLANs.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure the WLAN/auth and asso sec protocols/WLC (Wireless LAN Controller) Management Interface.png" alt="Wireless LAN Controller Management Interface"> <figcaption>WLC-1 management set to 192.168.1.1/24 with gateway 192.168.1.254 and DNS 192.168.1.253.</figcaption>
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Configure the WLAN/auth and asso sec protocols/WLC (Wireless LAN Controller) Management Interface.png"
+                        alt="Wireless LAN Controller Management Interface">
+                    <figcaption>WLC-1 management set to 192.168.1.1/24 with gateway 192.168.1.254 and DNS 192.168.1.253.
+                    </figcaption>
                 </figure>
             </li>
 
             <li>
-                <b>Create the wireless networks (SSIDs):</b> I segmented internal users (secure Staff) from visitors (Guest), matching a real office policy.
+                <b>Create the wireless networks (SSIDs):</b> I segmented internal users (secure Staff) from visitors
+                (Guest), matching a real office policy.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure the WLAN/auth and asso sec protocols/WLC (Wireless LAN Controller) Management Interface.png" alt="Create the wireless networks"> <figcaption>Two WLANs created. Staff (WPA2-PSK) and Guest (open) and enabled on the WLC.</figcaption>
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Configure the WLAN/auth and asso sec protocols/WLC (Wireless LAN Controller) Management Interface.png"
+                        alt="Create the wireless networks">
+                    <figcaption>Two WLANs created. Staff (WPA2-PSK) and Guest (open) and enabled on the WLC.
+                    </figcaption>
                 </figure>
             </li>
 
             <li>
-                <b>Hand out docs settings automatically:</b> docss that join the WLAN get everything they need without manual config.
+                <b>Hand out docs settings automatically:</b> docss that join the WLAN get everything they need without
+                manual config.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure the WLAN/auth and asso sec protocols/DHCP and DNS Server Configuration.png" alt="DHCP and DNS Server Configuration"> <figcaption>DHCP pool issues IP, gateway, DNS and the WLC address for auto-discovery.</figcaption>
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Configure the WLAN/auth and asso sec protocols/DHCP and DNS Server Configuration.png"
+                        alt="DHCP and DNS Server Configuration">
+                    <figcaption>DHCP pool issues IP, gateway, DNS and the WLC address for auto-discovery.</figcaption>
                 </figure>
             </li>
 
             <li>
-                <b>Access Point and WLC:</b> The AP picks up an IP, finds the WLC, and starts broadcasting Staff and Guest.
+                <b>Access Point and WLC:</b> The AP picks up an IP, finds the WLC, and starts broadcasting Staff and
+                Guest.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure the WLAN/auth and asso sec protocols/Access Point (AP1) Settings.png" alt="Access Point (AP1) Settings">
-                    <figcaption>AP1 set to DHCP so it registers to the controller and advertises both SSIDs.</figcaption>
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Configure the WLAN/auth and asso sec protocols/Access Point (AP1) Settings.png"
+                        alt="Access Point (AP1) Settings">
+                    <figcaption>AP1 set to DHCP so it registers to the controller and advertises both SSIDs.
+                    </figcaption>
                 </figure>
             </li>
 
             <li>
-                <b>Join a docs to the secure SSID: </b>This proves the SSID is live, security is enforced, and docss can authenticate.
+                <b>Join a docs to the secure SSID: </b>This proves the SSID is live, security is enforced, and docss can
+                authenticate.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure the WLAN/auth and asso sec protocols/Laptop Wireless Connection.png" alt="Laptop Wireless Connection">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Configure the WLAN/auth and asso sec protocols/Laptop Wireless Connection.png"
+                        alt="Laptop Wireless Connection">
                     <figcaption>Laptop detects the Staff SSID and connects using WPA2-PSK</figcaption>
                 </figure>
             </li>
 
             <li>
-                <b>Validate real traffic: </b>I confirmed the docs actually leases an IP, resolves names and syncs time, not just connected.
+                <b>Validate real traffic: </b>I confirmed the docs actually leases an IP, resolves names and syncs time,
+                not just connected.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure the WLAN/auth and asso sec protocols/Wireshark to discover.png" alt="Laptop Wireless Connection">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Configure the WLAN/auth and asso sec protocols/Wireshark to discover.png"
+                        alt="Laptop Wireless Connection">
                     <figcaption>Wireshark capture showing DHCP, DNS, ARP and NTP after the wireless join.</figcaption>
                 </figure>
             </li>
 
             <li>
-                <b>Show the full design in context: </b>This ties the build together and shows where each WLAN component sits in the network.
+                <b>Show the full design in context: </b>This ties the build together and shows where each WLAN component
+                sits in the network.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure the WLAN/auth and asso sec protocols/Packet Tracer Final Skill Exam Topology.png" alt="Packet Tracer Final Topology">
-                    <figcaption>End-to-end topology — routers, switches, WLC, AP, DHCP/DNS and docss with addressing table.</figcaption>
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Configure the WLAN/auth and asso sec protocols/Packet Tracer Final Skill Exam Topology.png"
+                        alt="Packet Tracer Final Topology">
+                    <figcaption>End-to-end topology — routers, switches, WLC, AP, DHCP/DNS and docss with addressing
+                        table.</figcaption>
                 </figure>
             </li>
         </ol>
@@ -235,15 +342,20 @@
         <ol>
             <h3>🗄️Structured & Unstructured Database Setup</h3>
             <p>
-                For this task, I demonstrated the ability to work with both relational (MySQL) and non-relational (MongoDB) databases. I created databases, built tables/collections, inserted data, and retrieved records using queries. This shows my capability to handle structured SQL as well as unstructured NoSQL environments, a key skill in modern full-stack and security-focused roles.
+                For this task, I demonstrated the ability to work with both relational (MySQL) and non-relational
+                (MongoDB) databases. I created databases, built tables/collections, inserted data, and retrieved records
+                using queries. This shows my capability to handle structured SQL as well as unstructured NoSQL
+                environments, a key skill in modern full-stack and security-focused roles.
             </p> <br>
 
-            
+
             <h4>🔹 MySQL (Structured Database)</h4>
             <li>
                 <b>Created and Connected to Database: </b>This establishes the working environment for structured data.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/DataBase SetUp/MySQL DB Setup/Created and connected to MySQL DB.png" alt="Created and Connected to Database">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/DataBase SetUp/MySQL DB Setup/Created and connected to MySQL DB.png"
+                        alt="Created and Connected to Database">
                     <figcaption>MySQL database ukachukwu created and connected successfully.</figcaption>
                 </figure>
             </li>
@@ -251,24 +363,32 @@
             <li>
                 <b>Table Creation: </b>Defines the schema structure for storing vulnerability records.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/DataBase SetUp/MySQL DB Setup/Table Created.png" alt="Create Table">
-                    <figcaption>Table topten_tbl created with fields for ID, CVE number, type, and total CVEs.</figcaption>
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/DataBase SetUp/MySQL DB Setup/Table Created.png"
+                        alt="Create Table">
+                    <figcaption>Table topten_tbl created with fields for ID, CVE number, type, and total CVEs.
+                    </figcaption>
                 </figure>
             </li>
 
             <li>
                 <b>Insert Records: </b>This step populates the table with realistic vulnerability data.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/DataBase SetUp/MySQL DB Setup/Insert Record.png" alt="Insert Records">
-                    <figcaption>Sample records inserted (Injection, Insecure Design, Broken Access Control).</figcaption>
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/DataBase SetUp/MySQL DB Setup/Insert Record.png"
+                        alt="Insert Records">
+                    <figcaption>Sample records inserted (Injection, Insecure Design, Broken Access Control).
+                    </figcaption>
                 </figure>
             </li>
 
             <li>
                 <b>Retrieve Records: </b>Verifies that data is stored and retrievable.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/DataBase SetUp/MySQL DB Setup/Retrieve database records1.png" alt="Retrieve Records">
-                    
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/DataBase SetUp/MySQL DB Setup/Retrieve database records1.png"
+                        alt="Retrieve Records">
+
                     <figcaption>Query returns all stored vulnerabilities from the table.</figcaption>
                 </figure>
             </li>
@@ -276,10 +396,13 @@
             <li>
                 <b>Conditional Query: </b>Demonstrates ability to run targeted queries for analysis.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/DataBase SetUp/MySQL DB Setup/Retrieve database records2.png" alt="Retrieve Records">
-                    <figcaption>SQL query filtering vulnerabilities with CVEs greater than 30,000 (Injection returned).</figcaption>
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/DataBase SetUp/MySQL DB Setup/Retrieve database records2.png"
+                        alt="Retrieve Records">
+                    <figcaption>SQL query filtering vulnerabilities with CVEs greater than 30,000 (Injection returned).
+                    </figcaption>
                 </figure>
-            </li>            
+            </li>
         </ol> <br>
 
         <ol>
@@ -287,8 +410,12 @@
             <li>
                 <b>Create Database & Collection: </b>Prepares a schema-less environment for unstructured data.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/DataBase SetUp/MongoDB Setup/MONGODB Display and Create a Collection1.png" alt="Create Database & Collection">
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/DataBase SetUp/MongoDB Setup/MONGODB Display and Create a Collection2.png" alt="Create Database & Collection">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/DataBase SetUp/MongoDB Setup/MONGODB Display and Create a Collection1.png"
+                        alt="Create Database & Collection">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/DataBase SetUp/MongoDB Setup/MONGODB Display and Create a Collection2.png"
+                        alt="Create Database & Collection">
                     <figcaption>MongoDB database ukachukwu created with vulnerabilities collection.</figcaption>
                 </figure>
             </li>
@@ -296,16 +423,23 @@
             <li>
                 <b>Insert Documents: </b>Unlike SQL, MongoDB stores flexible JSON-like records.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/DataBase SetUp/MongoDB Setup/Insert Document.png" alt="Insert Documents">
-                    <figcaption>Vulnerability documents inserted in JSON format (Authentication Failures, Data Integrity Failures)</figcaption>
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/DataBase SetUp/MongoDB Setup/Insert Document.png"
+                        alt="Insert Documents">
+                    <figcaption>Vulnerability documents inserted in JSON format (Authentication Failures, Data Integrity
+                        Failures)</figcaption>
                 </figure>
             </li>
 
             <li>
                 <b>Retrieve Documents: </b>Validates that documents were successfully added and can be queried.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/DataBase SetUp/MongoDB Setup/Retrieve DataBase Document1.png" alt="Retrieve Documents">
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/DataBase SetUp/MongoDB Setup/Retrieve DataBase Document2.png" alt="Retrieve Documents">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/DataBase SetUp/MongoDB Setup/Retrieve DataBase Document1.png"
+                        alt="Retrieve Documents">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/DataBase SetUp/MongoDB Setup/Retrieve DataBase Document2.png"
+                        alt="Retrieve Documents">
                     <figcaption>Query returns all inserted vulnerability documents.</figcaption>
                 </figure>
             </li>
@@ -313,7 +447,9 @@
             <li>
                 <b>Search in Collection: </b>Demonstrates querying unstructured data using MongoDB’s powerful search.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/DataBase SetUp/MongoDB Setup/Search in Collection.png" alt="Search in Collection">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/DataBase SetUp/MongoDB Setup/Search in Collection.png"
+                        alt="Search in Collection">
                     <figcaption>Search query filters specific vulnerabilities</figcaption>
                 </figure>
             </li>
@@ -323,85 +459,122 @@
         <ol>
             <h3>🔐 Secure Network and Endpoints</h3>
             <p>
-                In this stage of the project, I focused on strengthening the network infrastructure by combining firewall policies, endpoint protections, and intrusion detection. Each step was tested and validated with logs or screenshots to ensure the controls worked as intended.
+                In this stage of the project, I focused on strengthening the network infrastructure by combining
+                firewall policies, endpoint protections, and intrusion detection. Each step was tested and validated
+                with logs or screenshots to ensure the controls worked as intended.
             </p> <br>
 
-            
+
             <h4>Configure Firewall Zones</h4>
             <li>
-                <b>Firewall Zones Configured:</b> I configured a zone-based firewall by creating inside and outside zones. This setup allowed trusted inside traffic to reach the outside, while blocking unsolicited outside access into the network.
+                <b>Firewall Zones Configured:</b> I configured a zone-based firewall by creating inside and outside
+                zones. This setup allowed trusted inside traffic to reach the outside, while blocking unsolicited
+                outside access into the network.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Secure network and endpoints/Configure the firewall zones/firewall zones to implement basic packet filtering.png" alt="Created and Connected to Database">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Secure network and endpoints/Configure the firewall zones/firewall zones to implement basic packet filtering.png"
+                        alt="Created and Connected to Database">
                     <figcaption>Firewall Zones Configured</figcaption>
                 </figure>
             </li>
             <li>
-                <b>Endpoint Firewall Enabled: </b>On the Windows docs, I enabled Windows Defender Firewall with Advanced Security. This added another layer of control on the endpoint, protecting it from unauthorized inbound traffic.
+                <b>Endpoint Firewall Enabled: </b>On the Windows docs, I enabled Windows Defender Firewall with Advanced
+                Security. This added another layer of control on the endpoint, protecting it from unauthorized inbound
+                traffic.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Secure network and endpoints/Configure the firewall zones/Firewall.png" alt="Created and Connected to Database">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Secure network and endpoints/Configure the firewall zones/Firewall.png"
+                        alt="Created and Connected to Database">
                     <figcaption>Endpoint Firewall Enabled</figcaption>
                 </figure>
             </li>
             <li>
-                <b>Internal Connectivity Test: </b>I tested connectivity with ICMP pings from an internal PC. The responses showed that allowed flows worked as expected through the firewall.
+                <b>Internal Connectivity Test: </b>I tested connectivity with ICMP pings from an internal PC. The
+                responses showed that allowed flows worked as expected through the firewall.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Secure network and endpoints/Verify firewall functionality/1.png" alt="Created and Connected to Database">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Secure network and endpoints/Verify firewall functionality/1.png"
+                        alt="Created and Connected to Database">
                     <figcaption>Internal Connectivity Test</figcaption>
                 </figure>
             </li>
             <li>
-                <b>Secure Remote Login: </b>Here I connected via SSH using RSA authentication. The successful login confirmed encrypted remote management was permitted, unlike insecure Telnet.
+                <b>Secure Remote Login: </b>Here I connected via SSH using RSA authentication. The successful login
+                confirmed encrypted remote management was permitted, unlike insecure Telnet.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Secure network and endpoints/Verify firewall functionality/2.png" alt="Created and Connected to Database">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Secure network and endpoints/Verify firewall functionality/2.png"
+                        alt="Created and Connected to Database">
                     <figcaption>Secure Remote Login</figcaption>
                 </figure>
             </li>
             <li>
-                <b>Stateful Inspection Check: </b>I ran show policy-map to confirm the firewall was tracking active sessions. The output displayed an ESTABLISHED TCP session being inspected.
+                <b>Stateful Inspection Check: </b>I ran show policy-map to confirm the firewall was tracking active
+                sessions. The output displayed an ESTABLISHED TCP session being inspected.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Secure network and endpoints/Verify firewall functionality/3.png" alt="Created and Connected to Database">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Secure network and endpoints/Verify firewall functionality/3.png"
+                        alt="Created and Connected to Database">
                     <figcaption>Stateful Inspection Check</figcaption>
                 </figure>
             </li>
             <li>
-                <b>Firewall Status on Endpoint: </b>I checked the Windows firewall status in the Control Panel. All profiles were enabled, showing endpoint protection was active.
+                <b>Firewall Status on Endpoint: </b>I checked the Windows firewall status in the Control Panel. All
+                profiles were enabled, showing endpoint protection was active.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Secure network and endpoints/Verify firewall functionality/4.png" alt="Created and Connected to Database">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Secure network and endpoints/Verify firewall functionality/4.png"
+                        alt="Created and Connected to Database">
                     <figcaption>Firewall Status on Endpoint</figcaption>
                 </figure>
             </li>
             <li>
-                <b>Host Network Verification: </b>Using ipconfig and pings, I verified the PC had the right IP address, gateway, and could reach internal resources securely.
+                <b>Host Network Verification: </b>Using ipconfig and pings, I verified the PC had the right IP address,
+                gateway, and could reach internal resources securely.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Secure network and endpoints/Verify firewall functionality/5.png" alt="Created and Connected to Database">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Secure network and endpoints/Verify firewall functionality/5.png"
+                        alt="Created and Connected to Database">
                     <figcaption>Host Network Verification</figcaption>
                 </figure>
             </li>
-             <li>
-                <b>Firewall Log Analysis (Allowed/Denied): </b>I reviewed pfirewall.log entries to see which packets were permitted or blocked. This confirmed my rules were working as intended.
+            <li>
+                <b>Firewall Log Analysis (Allowed/Denied): </b>I reviewed pfirewall.log entries to see which packets
+                were permitted or blocked. This confirmed my rules were working as intended.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Secure network and endpoints/Conduct a log analysis/Firewall log analysis1.png" alt="Created and Connected to Database">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Secure network and endpoints/Conduct a log analysis/Firewall log analysis1.png"
+                        alt="Created and Connected to Database">
                     <figcaption>Firewall Log Analysis (Allowed/Denied)</figcaption>
                 </figure>
             </li>
             <li>
-                <b>Negative Test – Blocked Traffic: </b>I attempted to ping a restricted host. The request failed, showing the firewall successfully blocked unauthorized traffic.
+                <b>Negative Test – Blocked Traffic: </b>I attempted to ping a restricted host. The request failed,
+                showing the firewall successfully blocked unauthorized traffic.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Secure network and endpoints/Conduct a log analysis/Firewall log analysis2.png" alt="Created and Connected to Database">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Secure network and endpoints/Conduct a log analysis/Firewall log analysis2.png"
+                        alt="Created and Connected to Database">
                     <figcaption>Negative Test – Blocked Traffic</figcaption>
                 </figure>
             </li>
-             <li>
-                <b>IDS/IPS Installation: </b>I installed Suricata IDS/IPS on Debian. This tool monitors network traffic in real time for suspicious or malicious activity.
+            <li>
+                <b>IDS/IPS Installation: </b>I installed Suricata IDS/IPS on Debian. This tool monitors network traffic
+                in real time for suspicious or malicious activity.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Secure network and endpoints/install suricata1/install suricata1.png" alt="Created and Connected to Database">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Secure network and endpoints/install suricata1/install suricata1.png"
+                        alt="Created and Connected to Database">
                     <figcaption>IDS/IPS Installation</figcaption>
                 </figure>
             </li>
             <li>
-                <b>Update IDS Rules: </b>I updated Suricata with the Emerging Threats ruleset. This gave the IDS/IPS up-to-date signatures to detect modern attacks.
+                <b>Update IDS Rules: </b>I updated Suricata with the Emerging Threats ruleset. This gave the IDS/IPS
+                up-to-date signatures to detect modern attacks.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Secure network and endpoints/install suricata1/install suricata2.png" alt="Created and Connected to Database">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Secure network and endpoints/install suricata1/install suricata2.png"
+                        alt="Created and Connected to Database">
                     <figcaption>Update IDS Rules</figcaption>
                 </figure>
             </li>
@@ -410,63 +583,93 @@
         <ol>
             <h3>🌐 Install and Configure Proxy Server (Squid)</h3>
             <p>
-                In this section, i successfully deployed and configured a Squid proxy server to filter web traffic, enforce access control, and block restricted websites. This demonstrated my ability to manage network security, traffic filtering, and endpoint protection in a practical lab environment.
+                In this section, i successfully deployed and configured a Squid proxy server to filter web traffic,
+                enforce access control, and block restricted websites. This demonstrated my ability to manage network
+                security, traffic filtering, and endpoint protection in a practical lab environment.
             </p> <br>
 
-       
+
             <li>
-                <b>Installing Squid Service:</b> Here I installed the Squid proxy server on a Debian machine. After installation, I restarted the Squid service to make sure it was running properly. This set the foundation for secure traffic filtering.
+                <b>Installing Squid Service:</b> Here I installed the Squid proxy server on a Debian machine. After
+                installation, I restarted the Squid service to make sure it was running properly. This set the
+                foundation for secure traffic filtering.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Secure network and endpoints/Install and configure a proxy server/Install and configure proxy server Squid1.png" alt="Created and Connected to Database">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Secure network and endpoints/Install and configure a proxy server/Install and configure proxy server Squid1.png"
+                        alt="Created and Connected to Database">
                     <figcaption>Install and configure proxy server Squid</figcaption>
                 </figure>
             </li>
             <li>
-                <b>Manual Proxy Configuration:</b> On the docs system, I configured a manual proxy to forward all HTTP and HTTPS traffic through the Squid server at 192.168.0.100 on port 3128. This ensured all browsing requests passed through the proxy for filtering.
+                <b>Manual Proxy Configuration:</b> On the docs system, I configured a manual proxy to forward all HTTP
+                and HTTPS traffic through the Squid server at 192.168.0.100 on port 3128. This ensured all browsing
+                requests passed through the proxy for filtering.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Secure network and endpoints/Install and configure a proxy server/Install and configure proxy server Squid2.png" alt="Created and Connected to Database">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Secure network and endpoints/Install and configure a proxy server/Install and configure proxy server Squid2.png"
+                        alt="Created and Connected to Database">
                     <figcaption>Manual Proxy Configuration</figcaption>
                 </figure>
             </li>
             <li>
-                <b>Creating Blocklist File:</b> I created a file blocked.domains.acl to store websites that should be restricted. This gave me control to selectively block domains as part of access policy.
+                <b>Creating Blocklist File:</b> I created a file blocked.domains.acl to store websites that should be
+                restricted. This gave me control to selectively block domains as part of access policy.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Secure network and endpoints/Install and configure a proxy server/Install and configure proxy server Squid3.png" alt="Created and Connected to Database">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Secure network and endpoints/Install and configure a proxy server/Install and configure proxy server Squid3.png"
+                        alt="Created and Connected to Database">
                     <figcaption>Creating Blocklist File</figcaption>
                 </figure>
             </li>
             <li>
-                <b>Adding Blocked Domains:</b> Inside the ACL file, I added google.com and reddit.com as examples of restricted websites. This allowed me to test the effectiveness of proxy filtering.
+                <b>Adding Blocked Domains:</b> Inside the ACL file, I added google.com and reddit.com as examples of
+                restricted websites. This allowed me to test the effectiveness of proxy filtering.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Secure network and endpoints/Install and configure a proxy server/Install and configure proxy server Squid4.png" alt="Created and Connected to Database">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Secure network and endpoints/Install and configure a proxy server/Install and configure proxy server Squid4.png"
+                        alt="Created and Connected to Database">
                     <figcaption>Adding Blocked Domains</figcaption>
                 </figure>
             </li>
             <li>
-                <b>Editing Squid Configuration File:</b> I updated Squid’s main config file squid.conf to reference the blocked domains list. This step tied the blocklist into the Squid rules so the proxy could enforce restrictions.
+                <b>Editing Squid Configuration File:</b> I updated Squid’s main config file squid.conf to reference the
+                blocked domains list. This step tied the blocklist into the Squid rules so the proxy could enforce
+                restrictions.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Secure network and endpoints/Install and configure a proxy server/Install and configure proxy server Squid5.png" alt="Created and Connected to Database">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Secure network and endpoints/Install and configure a proxy server/Install and configure proxy server Squid5.png"
+                        alt="Created and Connected to Database">
                     <figcaption>Editing Squid Configuration File</figcaption>
                 </figure>
             </li>
             <li>
-                <b>Restarting Squid Service:</b> After applying changes, I restarted the Squid service. This ensured the updated rules and blocked domains took effect immediately.
+                <b>Restarting Squid Service:</b> After applying changes, I restarted the Squid service. This ensured the
+                updated rules and blocked domains took effect immediately.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Secure network and endpoints/Install and configure a proxy server/Install and configure proxy server Squid6.png" alt="Created and Connected to Database">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Secure network and endpoints/Install and configure a proxy server/Install and configure proxy server Squid6.png"
+                        alt="Created and Connected to Database">
                     <figcaption>Restarting Squid Service</figcaption>
                 </figure>
             </li>
             <li>
-                <b>Testing Blocked Sites:</b> When I attempted to access Google.com through the browser, the request was denied by the proxy. This confirmed that my rules were working and the proxy successfully blocked restricted sites.
+                <b>Testing Blocked Sites:</b> When I attempted to access Google.com through the browser, the request was
+                denied by the proxy. This confirmed that my rules were working and the proxy successfully blocked
+                restricted sites.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Secure network and endpoints/Install and configure a proxy server/Install and configure proxy server Squid7.png" alt="Created and Connected to Database">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Secure network and endpoints/Install and configure a proxy server/Install and configure proxy server Squid7.png"
+                        alt="Created and Connected to Database">
                     <figcaption>Testing Blocked Sites</figcaption>
                 </figure>
             </li>
             <li>
-                <b>Confirmation of Active Policy:</b> Finally, I re-verified the Squid service and the blocklist ACL. This confirmed that the proxy server was active, functional, and applying my custom security rules.
+                <b>Confirmation of Active Policy:</b> Finally, I re-verified the Squid service and the blocklist ACL.
+                This confirmed that the proxy server was active, functional, and applying my custom security rules.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Secure network and endpoints/Install and configure a proxy server/Install and configure proxy server Squid8.png" alt="Created and Connected to Database">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Secure network and endpoints/Install and configure a proxy server/Install and configure proxy server Squid8.png"
+                        alt="Created and Connected to Database">
                     <figcaption>Confirmation of Active Policy</figcaption>
                 </figure>
             </li>
@@ -475,133 +678,198 @@
         <ol>
             <h3>🔑 Install and Configure an SSH Server</h3>
             <p>
-                As part of strengthening secure remote access within the network, I installed and configured an OpenSSH server using RSA key authentication. This ensured encrypted sessions for remote logins and file transfers, protecting data integrity and confidentiality.
+                As part of strengthening secure remote access within the network, I installed and configured an OpenSSH
+                server using RSA key authentication. This ensured encrypted sessions for remote logins and file
+                transfers, protecting data integrity and confidentiality.
             </p> <br>
 
-       
+
             <li>
-                <b>Install OpenSSH Server:</b> To enable SSH functionality, I installed the OpenSSH server package on the Debian system.
+                <b>Install OpenSSH Server:</b> To enable SSH functionality, I installed the OpenSSH server package on
+                the Debian system.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Secure network and endpoints/Install and configure an SSH server/Install and configure an SSH Server2.png" alt="Created and Connected to Database">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Secure network and endpoints/Install and configure an SSH server/Install and configure an SSH Server2.png"
+                        alt="Created and Connected to Database">
                     <figcaption>Install OpenSSH Server</figcaption>
                 </figure>
             </li>
             <li>
-                <b>Start and Verify SSH Service:</b> After installation, I started the SSH service and confirmed that it was active and listening on the default port (22).
+                <b>Start and Verify SSH Service:</b> After installation, I started the SSH service and confirmed that it
+                was active and listening on the default port (22).
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Secure network and endpoints/Install and configure an SSH server/Install and configure an SSH Server1.png" alt="Created and Connected to Database">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Secure network and endpoints/Install and configure an SSH server/Install and configure an SSH Server1.png"
+                        alt="Created and Connected to Database">
                     <figcaption>Start and Verify SSH Service</figcaption>
                 </figure>
             </li>
             <li>
-                <b>Generate RSA Key Pair:</b> I generated a 4096-bit RSA key pair for secure authentication. The keys were stored in the ~/.ssh directory.
+                <b>Generate RSA Key Pair:</b> I generated a 4096-bit RSA key pair for secure authentication. The keys
+                were stored in the ~/.ssh directory.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Secure network and endpoints/Verify firewall functionality/Generate and verify public and private key-pair1.png" alt="Created and Connected to Database">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Secure network and endpoints/Verify firewall functionality/Generate and verify public and private key-pair1.png"
+                        alt="Created and Connected to Database">
                     <figcaption>Generate RSA Key Pair</figcaption>
                 </figure>
             </li>
-             <li>
-                <b>Verify Key Files:</b> I confirmed the presence of both the private (id_rsa) and public (id_rsa.pub) keys in the .ssh directory.
+            <li>
+                <b>Verify Key Files:</b> I confirmed the presence of both the private (id_rsa) and public (id_rsa.pub)
+                keys in the .ssh directory.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Secure network and endpoints/Verify firewall functionality/Generate and verify public and private key-pair2.png" alt="Created and Connected to Database">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Secure network and endpoints/Verify firewall functionality/Generate and verify public and private key-pair2.png"
+                        alt="Created and Connected to Database">
                     <figcaption>Verify Key Files</figcaption>
                 </figure>
             </li>
             <li>
-                <b>Initial SSH Login Attempt:</b> Attempted an SSH login from a docs machine to the server. The first attempt required accepting the server’s fingerprint for secure identification.
+                <b>Initial SSH Login Attempt:</b> Attempted an SSH login from a docs machine to the server. The first
+                attempt required accepting the server’s fingerprint for secure identification.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Secure network and endpoints/Verify firewall functionality/Connect to an SSH server using a public key1.png" alt="Created and Connected to Database">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Secure network and endpoints/Verify firewall functionality/Connect to an SSH server using a public key1.png"
+                        alt="Created and Connected to Database">
                     <figcaption>Initial SSH Login Attempt</figcaption>
                 </figure>
             </li>
             <li>
-                <b>Copy Public Key to Server:</b> Using the ssh-copy-id command, I transferred the docs’s public key to the server’s authorized_keys file, enabling passwordless authentication.
+                <b>Copy Public Key to Server:</b> Using the ssh-copy-id command, I transferred the docs’s public key to
+                the server’s authorized_keys file, enabling passwordless authentication.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Secure network and endpoints/Verify firewall functionality/Connect to an SSH server using a public key2.png" alt="Created and Connected to Database">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Secure network and endpoints/Verify firewall functionality/Connect to an SSH server using a public key2.png"
+                        alt="Created and Connected to Database">
                     <figcaption>Copy Public Key to Server</figcaption>
                 </figure>
             </li>
             <li>
-                <b>Verify SSH Key Authentication:</b> Finally, I successfully logged into the server using the RSA public key without entering a password. This confirmed that RSA-based key authentication was configured correctly.
+                <b>Verify SSH Key Authentication:</b> Finally, I successfully logged into the server using the RSA
+                public key without entering a password. This confirmed that RSA-based key authentication was configured
+                correctly.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Secure network and endpoints/Verify firewall functionality/Connect to an SSH server using a public key3.png" alt="Created and Connected to Database">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Secure network and endpoints/Verify firewall functionality/Connect to an SSH server using a public key3.png"
+                        alt="Created and Connected to Database">
                     <figcaption>Verify SSH Key Authentication</figcaption>
                 </figure>
             </li>
 
             <section>
                 ✅ Outcome:
-                This setup demonstrated my ability to configure a secure SSH server with RSA authentication, ensuring encrypted communication channels and enhancing overall network security.
+                This setup demonstrated my ability to configure a secure SSH server with RSA authentication, ensuring
+                encrypted communication channels and enhancing overall network security.
             </section>
         </ol>
 
         <ol>
             <h3>Configure a VPN Server</h3>
             <p>
-                By completing these steps, I successfully configured a site-to-site and dial-in VPN server, tested encrypted tunnels, and validated connectivity using both ping tests and secure authentication. This demonstrates my ability to implement VPN infrastructure for secure remote access and inter-site communication.
+                By completing these steps, I successfully configured a site-to-site and dial-in VPN server, tested
+                encrypted tunnels, and validated connectivity using both ping tests and secure authentication. This
+                demonstrates my ability to implement VPN infrastructure for secure remote access and inter-site
+                communication.
             </p> <br>
 
-       
+
             <li>
-                <b>Configuring VPN Properties:</b> I started by opening the VPN server properties in the Routing and Remote Access Manager. Here, I configured the authentication provider, accounting provider, and SSL certificate binding to ensure secure encrypted tunnels for remote access. This step ensures that only authenticated users can connect.
+                <b>Configuring VPN Properties:</b> I started by opening the VPN server properties in the Routing and
+                Remote Access Manager. Here, I configured the authentication provider, accounting provider, and SSL
+                certificate binding to ensure secure encrypted tunnels for remote access. This step ensures that only
+                authenticated users can connect.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure-VPN-Server/Configure and connect a site-to-site VPN tunnel1.png" alt="Configuring VPN Properties">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Configure-VPN-Server/Configure and connect a site-to-site VPN tunnel1.png"
+                        alt="Configuring VPN Properties">
                     <figcaption>Configuring VPN Properties</figcaption>
                 </figure>
             </li>
             <li>
-                <b>Viewing Network Interfaces on VPN Server 1:</b> On VPN Server 1, I reviewed the available network interfaces. This view shows the physical and logical interfaces, confirming which ones are active, connected, and ready for VPN use. It ensures the network adapter is enabled and available for tunneling.
+                <b>Viewing Network Interfaces on VPN Server 1:</b> On VPN Server 1, I reviewed the available network
+                interfaces. This view shows the physical and logical interfaces, confirming which ones are active,
+                connected, and ready for VPN use. It ensures the network adapter is enabled and available for tunneling.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure-VPN-Server/Configure and connect a site-to-site VPN tunnel2.png" alt="Configure and connect a site-to-site VPN tunnel2">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Configure-VPN-Server/Configure and connect a site-to-site VPN tunnel2.png"
+                        alt="Configure and connect a site-to-site VPN tunnel2">
                     <figcaption>Viewing Network Interfaces on VPN Server 1</figcaption>
                 </figure>
             </li>
             <li>
-                <b>Viewing Network Interfaces on VPN Server 2:</b> On VPN Server 2, I repeated the same check. The “VPN to SITE-A” interface is listed but disconnected, showing that the tunnel has not yet been established. This step verified readiness on both ends before final tunnel configuration.
+                <b>Viewing Network Interfaces on VPN Server 2:</b> On VPN Server 2, I repeated the same check. The “VPN
+                to SITE-A” interface is listed but disconnected, showing that the tunnel has not yet been established.
+                This step verified readiness on both ends before final tunnel configuration.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure-VPN-Server/Configure and connect a site-to-site VPN tunnel3.png" alt="Configure and connect a site-to-site VPN tunnel3">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Configure-VPN-Server/Configure and connect a site-to-site VPN tunnel3.png"
+                        alt="Configure and connect a site-to-site VPN tunnel3">
                     <figcaption>Viewing Network Interfaces on VPN Server 2</figcaption>
                 </figure>
             </li>
             <li>
-                <b>Testing Connectivity with Ping (Before VPN):</b> I attempted to ping the remote subnet 10.10.20.10 from the docs machine. The request timed out, confirming that connectivity was not yet possible without the VPN tunnel. This serves as a baseline test before enabling the VPN.
+                <b>Testing Connectivity with Ping (Before VPN):</b> I attempted to ping the remote subnet 10.10.20.10
+                from the docs machine. The request timed out, confirming that connectivity was not yet possible without
+                the VPN tunnel. This serves as a baseline test before enabling the VPN.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure-VPN-Server/Configure and connect a site-to-site VPN tunnel4.png" alt="Configure and connect a site-to-site VPN tunnel3">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Configure-VPN-Server/Configure and connect a site-to-site VPN tunnel4.png"
+                        alt="Configure and connect a site-to-site VPN tunnel3">
                     <figcaption>Testing Connectivity with Ping (Before VPN)</figcaption>
                 </figure>
             </li>
             <li>
-                <b>Testing Connectivity with Ping (After VPN):</b> After enabling the VPN tunnel, I re-tested connectivity. The ping to 10.10.1.1 succeeded with 0% packet loss. This verified that the VPN tunnel was now passing traffic securely between the two networks.
+                <b>Testing Connectivity with Ping (After VPN):</b> After enabling the VPN tunnel, I re-tested
+                connectivity. The ping to 10.10.1.1 succeeded with 0% packet loss. This verified that the VPN tunnel was
+                now passing traffic securely between the two networks.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure-VPN-Server/Configure VPN Server as a Dial VPN server and connect from a remote PC1.png" alt="Configure and connect a site-to-site VPN tunnel3">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Configure-VPN-Server/Configure VPN Server as a Dial VPN server and connect from a remote PC1.png"
+                        alt="Configure and connect a site-to-site VPN tunnel3">
                     <figcaption>Testing Connectivity with Ping (After VPN)</figcaption>
                 </figure>
             </li>
             <li>
-                <b>Completing the VPN Setup Wizard:</b> I completed the Routing and Remote Access Server Setup Wizard, enabling VPN access. This finalizes the VPN configuration on the server side and applies the security policies required.
+                <b>Completing the VPN Setup Wizard:</b> I completed the Routing and Remote Access Server Setup Wizard,
+                enabling VPN access. This finalizes the VPN configuration on the server side and applies the security
+                policies required.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure-VPN-Server/Configure VPN Server as a Dial VPN server and connect from a remote PC2.png" alt="Configure and connect a site-to-site VPN tunnel3">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Configure-VPN-Server/Configure VPN Server as a Dial VPN server and connect from a remote PC2.png"
+                        alt="Configure and connect a site-to-site VPN tunnel3">
                     <figcaption>Completing the VPN Setup Wizard</figcaption>
                 </figure>
             </li>
             <li>
-                <b>Adding VPN Connection on docs PC:</b> On the docs system, I created a new VPN connection using Windows’ built-in VPN provider. I entered the VPN server’s IP (10.10.10.1) and configured it with a pre-shared key for L2TP/IPsec encryption.
+                <b>Adding VPN Connection on docs PC:</b> On the docs system, I created a new VPN connection using
+                Windows’ built-in VPN provider. I entered the VPN server’s IP (10.10.10.1) and configured it with a
+                pre-shared key for L2TP/IPsec encryption.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure-VPN-Server/Configure VPN Server as a Dial VPN server and connect from a remote PC3.png" alt="Configure and connect a site-to-site VPN tunnel3">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Configure-VPN-Server/Configure VPN Server as a Dial VPN server and connect from a remote PC3.png"
+                        alt="Configure and connect a site-to-site VPN tunnel3">
                     <figcaption>Adding VPN Connection on docs PC</figcaption>
                 </figure>
             </li>
             <li>
-                <b>Testing Authentication:</b> I attempted to log in with VPN user credentials. The first attempt failed due to incorrect details, which highlights the importance of accurate username/password management for secure access.
+                <b>Testing Authentication:</b> I attempted to log in with VPN user credentials. The first attempt failed
+                due to incorrect details, which highlights the importance of accurate username/password management for
+                secure access.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure-VPN-Server/Configure VPN Server as a Dial VPN server and connect from a remote PC4.png" alt="Configure and connect a site-to-site VPN tunnel3">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Configure-VPN-Server/Configure VPN Server as a Dial VPN server and connect from a remote PC4.png"
+                        alt="Configure and connect a site-to-site VPN tunnel3">
                     <figcaption>Testing Authentication</figcaption>
                 </figure>
             </li>
             <li>
-                <b>Successful VPN Connection:</b> Finally, I successfully connected to the VPN. The status shows “Connected,” confirming that the encrypted tunnel is active and ready for secure communication between remote sites.
+                <b>Successful VPN Connection:</b> Finally, I successfully connected to the VPN. The status shows
+                “Connected,” confirming that the encrypted tunnel is active and ready for secure communication between
+                remote sites.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure-VPN-Server/Configure VPN Server as a Dial VPN server and connect from a remote PC5.png" alt="Configure and connect a site-to-site VPN tunnel3">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Configure-VPN-Server/Configure VPN Server as a Dial VPN server and connect from a remote PC5.png"
+                        alt="Configure and connect a site-to-site VPN tunnel3">
                     <figcaption>Successful VPN Connection</figcaption>
                 </figure>
             </li>
@@ -610,21 +878,29 @@
         <ol>
             <h3>Configure a VPN Server</h3>
             <p>
-                I successfully configured a site-to-site and dial-in VPN server, tested encrypted tunnels, and validated connectivity using both ping tests and secure authentication. This demonstrates my ability to implement VPN infrastructure for secure remote access and inter-site communication.
+                I successfully configured a site-to-site and dial-in VPN server, tested encrypted tunnels, and validated
+                connectivity using both ping tests and secure authentication. This demonstrates my ability to implement
+                VPN infrastructure for secure remote access and inter-site communication.
             </p> <br>
 
-       
+
             <li>
-                <b>Configuring VPN Properties:</b> I started by opening the VPN server properties in the Routing and Remote Access Manager. Here, I configured the authentication provider, accounting provider, and SSL certificate binding to ensure secure encrypted tunnels for remote access. This step ensures that only authenticated users can connect.
+                <b>Configuring VPN Properties:</b> I started by opening the VPN server properties in the Routing and
+                Remote Access Manager. Here, I configured the authentication provider, accounting provider, and SSL
+                certificate binding to ensure secure encrypted tunnels for remote access. This step ensures that only
+                authenticated users can connect.
                 <figure>
-                    <img class="firewall_img" src="assets/images/Data Analysis Images/Configure-VPN-Server/Configure and connect a site-to-site VPN tunnel1.png" alt="Configuring VPN Properties">
+                    <img class="firewall_img"
+                        src="assets/images/Data Analysis Images/Configure-VPN-Server/Configure and connect a site-to-site VPN tunnel1.png"
+                        alt="Configuring VPN Properties">
                     <figcaption>Configuring VPN Properties</figcaption>
                 </figure>
             </li>
         </ol>
-        
+
         <a href="./projects.html" class="back-link">← Back to Projects</a>
     </main>
 
 </body>
+
 </html>

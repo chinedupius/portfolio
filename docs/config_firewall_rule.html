@@ -1,39 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>Configuring Firewall Settings and Adding New Rules</title>
+
+  <!-- Base path + stylesheet -->
   <base href="/portfolio/" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body>
-  <header>
-        <div class="header-inner">
-            <div class="nav-left">
-                <img src="assets/images/profile.jpg" alt="Chinedu Ukachukwu" class="nav-avatar" />
-            </div>
-    
-            <h2 class="site-title">Chinedu Pius Ukachukwu</h2>
-            <p class="subtitle">Aspiring Cybersecurity Professional</p>
-    
-            <nav class="site-nav">
-                <a href="index.html">Home</a>
-                <a href="projects.html">Projects</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </div>
-    </header>
 
-  <main class="project-detail">
-    <h2>🔥Configuring Firewall Settings and Adding New Rules</h2>
+<body>
+  <!-- =========================
+       HEADER (matches new CSS)
+       ========================= -->
+  <header>
+    <div class="header-inner">
+      <div class="nav-left">
+        <img src="assets/images/profile.jpg" alt="Chinedu Ukachukwu" class="nav-avatar" />
+      </div>
+
+      <h2 class="site-title">Chinedu Pius Ukachukwu</h2>
+      <p class="subtitle">Aspiring Cybersecurity Professional</p>
+
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================
+       MAIN CONTENT
+       ========================= -->
+  <main class="project-detail section">
+    <h1>🔥 Configuring Firewall Settings and Adding New Rules</h1>
+
     <h4>Objective</h4>
     <p>
-      The purpose of this lab exercise was to configure Windows Defender Firewall rules in order to allow ICMP (ping) traffic for troubleshooting network connectivity between devices. Instead of disabling the firewall, which would expose the system to unnecessary risks, a new rule was created to permit ICMP requests temporarily. After successful testing, the rule was removed to restore the firewall’s secure configuration.
+      The purpose of this lab exercise was to configure Windows Defender Firewall rules to allow ICMP (ping)
+      traffic for troubleshooting network connectivity between devices. Instead of disabling the firewall (which would
+      increase risk), I created a temporary inbound rule to permit ICMP. After successful testing, I removed the rule to
+      restore the secure baseline.
     </p>
 
-    <h3>🔧 Tools & Environment</h3>
+    <h3>🔧 Tools &amp; Environment</h3>
     <ul>
       <li>Operating System: Windows 11</li>
       <li>Firewall Utility: Windows Defender Firewall with Advanced Security</li>
@@ -42,39 +56,110 @@
 
     <h3>📌 Procedure</h3>
     <ol>
-      <li><b>Verify Ping Test Before Rule:</b>
-        <img class="firewall_img" src="assets/images/Firewall Configuration/ICMP Blocked Ping before troubleshooting.JPG" alt="Ping request failed due to blocked ICMP">
-      </li><br>
-      <li><b>Access Firewall Settings:</b>
-        <img class="firewall_img" src="assets/images/Firewall Configuration/Windows Security.png" alt="Windows Security"><br>
-        <img class="firewall_img" src="assets/images/Firewall Configuration/Go to advance settings.png" alt="Advanced Settings">
-      </li><br>
-      <li><b>Open Inbound Rules:</b>
-        <img class="firewall_img" src="assets/images/Firewall Configuration/click inbound rules.png" alt="New Inbound Rule">
-      </li><br>
-      <li><b>Create a New Rule:</b>
-        <img class="firewall_img" src="assets/images/Firewall Configuration/New Rule.png" alt="New Inbound Rule">
-        <img class="firewall_img" src="assets/images/Firewall Configuration/Custom and next.png" alt="Custom Rule">
-      </li><br>
-      <li><b>Define Protocol and Ports:</b>
-        <img class="firewall_img" src="assets/images/Firewall Configuration/Protocol and ICMP.png" alt="Configured protocol and ICMP">
-      </li><br>
-      <li><b>Named the Rule:</b>
-        <img class="firewall_img" src="assets/images/Firewall Configuration/ICMP Finished.png" alt="Allow ICMP">
-      </li><br>
-      <li><b>Set Action and Profile:</b>
-        <img class="firewall_img" src="assets/images/Firewall Configuration/Allowed ICMP Request.png" alt="ICMP Configuration complete">
-      </li><br>
-      <li><b>Verify with Ping Test:</b>
-        <img class="firewall_img" src="assets/images/Firewall Configuration/ICMP Allowed.JPG" alt="Allowed ICMP">
-      </li><br>
-      <li><b>Remove Rule After Testing:</b>
-        <img class="firewall_img" src="assets/images/Firewall Configuration/Delete Rule after troubleshooting.png" alt="Rule deleted">
-        <img class="firewall_img" src="assets/images/Firewall Configuration/Confirmed Deletion.png" alt="Delete Confirmed">
-      </li><br>
-      <li><b>Verify Ping Test After Troubleshooting is complete:</b>
-        <img class="firewall_img" src="assets/images/Firewall Configuration/ICMP Blocked after troubleshooting.JPG" alt="ICMP Blocked">
-      </li><br>
+      <li>
+        <strong>Verify Ping Test Before Rule</strong>
+        <figure>
+          <img class="screenshot"
+            src="assets/images/Firewall Configuration/ICMP Blocked Ping before troubleshooting.JPG"
+            alt="Ping request failed due to blocked ICMP on Windows 11">
+          <figcaption>Initial ping blocked by firewall (ICMP not permitted).</figcaption>
+        </figure>
+      </li>
+
+      <li>
+        <strong>Access Firewall Settings</strong>
+        <figure>
+          <img class="screenshot" src="assets/images/Firewall Configuration/Windows Security.png"
+            alt="Windows Security home screen">
+          <figcaption>Open Windows Security to manage firewall settings.</figcaption>
+        </figure>
+        <figure>
+          <img class="screenshot" src="assets/images/Firewall Configuration/Go to advance settings.png"
+            alt="Link to Windows Defender Firewall with Advanced Security">
+          <figcaption>Launch <em>Windows Defender Firewall with Advanced Security</em>.</figcaption>
+        </figure>
+      </li>
+
+      <li>
+        <strong>Open Inbound Rules</strong>
+        <figure>
+          <img class="screenshot" src="assets/images/Firewall Configuration/click inbound rules.png"
+            alt="Inbound Rules view in Windows Defender Firewall">
+          <figcaption>Navigate to <em>Inbound Rules</em> to add a new rule.</figcaption>
+        </figure>
+      </li>
+
+      <li>
+        <strong>Create a New Rule</strong>
+        <figure>
+          <img class="screenshot" src="assets/images/Firewall Configuration/New Rule.png" alt="New Rule wizard start">
+          <figcaption>Start the New Inbound Rule Wizard.</figcaption>
+        </figure>
+        <figure>
+          <img class="screenshot" src="assets/images/Firewall Configuration/Custom and next.png"
+            alt="Choose Custom rule type">
+          <figcaption>Select <em>Custom</em> rule to target ICMP precisely.</figcaption>
+        </figure>
+      </li>
+
+      <li>
+        <strong>Define Protocol and Ports</strong>
+        <figure>
+          <img class="screenshot" src="assets/images/Firewall Configuration/Protocol and ICMP.png"
+            alt="Protocol and Ports page with ICMPv4 selected">
+          <figcaption>Choose <em>ICMPv4</em> as the protocol (Echo Request/Reply).</figcaption>
+        </figure>
+      </li>
+
+      <li>
+        <strong>Name the Rule</strong>
+        <figure>
+          <img class="screenshot" src="assets/images/Firewall Configuration/ICMP Finished.png"
+            alt="Rule named Allow ICMP and summary">
+          <figcaption>Name and review the new rule (e.g., “Allow ICMP (Ping) – Temporary”).</figcaption>
+        </figure>
+      </li>
+
+      <li>
+        <strong>Set Action and Profile</strong>
+        <figure>
+          <img class="screenshot" src="assets/images/Firewall Configuration/Allowed ICMP Request.png"
+            alt="Allow the connection and apply to appropriate profiles">
+          <figcaption>Action set to <em>Allow the connection</em>; profiles scoped as needed.</figcaption>
+        </figure>
+      </li>
+
+      <li>
+        <strong>Verify with Ping Test</strong>
+        <figure>
+          <img class="screenshot" src="assets/images/Firewall Configuration/ICMP Allowed.JPG"
+            alt="Ping test succeeds after enabling ICMP rule">
+          <figcaption>Ping succeeds (0% loss) confirming the rule is effective.</figcaption>
+        </figure>
+      </li>
+
+      <li>
+        <strong>Remove Rule After Testing</strong>
+        <figure>
+          <img class="screenshot" src="assets/images/Firewall Configuration/Delete Rule after troubleshooting.png"
+            alt="Deleting the temporary ICMP firewall rule">
+          <figcaption>Delete the temporary troubleshooting rule.</figcaption>
+        </figure>
+        <figure>
+          <img class="screenshot" src="assets/images/Firewall Configuration/Confirmed Deletion.png"
+            alt="Confirmation dialog for rule deletion">
+          <figcaption>Confirm deletion to return to hardened defaults.</figcaption>
+        </figure>
+      </li>
+
+      <li>
+        <strong>Verify Ping Test After Troubleshooting</strong>
+        <figure>
+          <img class="screenshot" src="assets/images/Firewall Configuration/ICMP Blocked after troubleshooting.JPG"
+            alt="Ping blocked again after rule removal">
+          <figcaption>Ping blocked again — system back to secure baseline.</figcaption>
+        </figure>
+      </li>
     </ol>
 
     <section>
@@ -82,18 +167,20 @@
       <ul>
         <li>The ICMP rule allowed successful pings between devices.</li>
         <li>Once deleted, the firewall reverted to its secure default state.</li>
-        <li>Demonstrated good practice: enabling rules temporarily rather than disabling the firewall entirely.</li>
+        <li>Good practice demonstrated: enable targeted rules temporarily rather than disabling the firewall.</li>
       </ul>
     </section>
 
     <section>
       <h3>Conclusion</h3>
       <p>
-        This lab reinforced the importance of secure firewall management. By adding a temporary inbound rule for ICMP traffic, I was able to troubleshoot connectivity issues effectively while maintaining system security. The exercise highlighted how proper rule configuration can balance security and functionality in real-world network environments.
+        This lab reinforced secure firewall management. By adding a temporary inbound rule for ICMP, I
+        troubleshot connectivity safely and then removed the rule to maintain least privilege on the host.
       </p>
     </section>
 
-    <a href="projects.html" class="back-link">← Back to Projects</a>
+    <p><a href="projects.html" class="back-link">← Back to Projects</a></p>
   </main>
 </body>
+
 </html>
